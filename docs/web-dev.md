@@ -284,7 +284,7 @@ for (let i = 0; i < mapSize.row; i++) {
 dots[1][3] = true // 第2行,第4列
 ```
 
-![image-20220408181913384](assets/image-20220408181913384.png)
+![image-20220408181913384](./assets/image-20220408181913384.png)
 
 ##### 查找
 
@@ -377,7 +377,7 @@ fetch("data/zip_code_database_US.json")
   })
 ```
 
-![image-20220511144142824](assets/image-20220511144142824.png)
+![image-20220511144142824](./assets/image-20220511144142824.png)
 
 #### 读取文件
 
@@ -720,7 +720,7 @@ https://www.bilibili.com/video/BV1Zy4y1K7SH?p=156
 
 ##### 方块->多边形
 
-![image-20220430201552851](assets/image-20220430201552851.png)
+![image-20220430201552851](./assets/image-20220430201552851.png)
 
 ```css
 div {
@@ -781,9 +781,9 @@ div {
 
 ##### 主轴和交叉轴
 
-<img src="assets/image-20211120125351395.png" alt="image-20211120125351395" style="zoom:67%;" />
+<img src="./assets/image-20211120125351395.png" alt="image-20211120125351395" style="zoom:67%;" />
 
-<img src="assets/image-20211120125854722.png" alt="image-20211120125854722" style="zoom:67%;" />
+<img src="./assets/image-20211120125854722.png" alt="image-20211120125854722" style="zoom:67%;" />
 
 ##### 横向 vs 纵向
 
@@ -795,7 +795,7 @@ div {
 }
 ```
 
-<img src="assets/bg2015071005.png" alt="img" style="zoom:67%;" />
+<img src="./assets/bg2015071005.png" alt="img" style="zoom:67%;" />
 
 ##### 换行
 
@@ -809,15 +809,15 @@ div {
 
 1. nowrap(默认) 不换行
 
-![img](assets/bg2015071007.png)
+![img](./assets/bg2015071007.png)
 
 2. wrap 换行
    
-   ![img](assets/bg2015071008.jpg)
+   ![img](./assets/bg2015071008.jpg)
 
 3. wrap-reverse 反向换行
 
-![img](assets/bg2015071009.jpg)
+![img](./assets/bg2015071009.jpg)
 
 ##### 对齐
 
@@ -839,7 +839,7 @@ div {
 }
 ```
 
-![img](assets/bg2015071011.png)
+![img](./assets/bg2015071011.png)
 
 ##### 空间分配
 
@@ -851,7 +851,7 @@ div {
 }
 ```
 
-![img](assets/bg2015071014.png)
+![img](./assets/bg2015071014.png)
 
 如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 
@@ -875,7 +875,7 @@ flex-shrink属性
 
 [2-圣杯布局](2-圣杯布局) 
 
-![image-20211120145909821](assets/image-20211120145909821.png)
+![image-20211120145909821](./assets/image-20211120145909821.png)
 
 参考: [Flex 布局教程：实例篇](https://www.ruanyifeng.com/blog/2015/07/flex-examples.html) 
 
@@ -883,7 +883,7 @@ flex-shrink属性
 
 ##### 蒙板效果
 
-![image-20220415183948516](assets/image-20220415183948516.png)
+![image-20220415183948516](./assets/image-20220415183948516.png)
 
 ```css
 .big-img {
@@ -910,7 +910,7 @@ flex-shrink属性
 
 ##### 按钮不可点击
 
-![image-20220331111324654](assets/image-20220331111324654.png)
+![image-20220331111324654](./assets/image-20220331111324654.png)
 
 ```css
 .inactive {
@@ -993,7 +993,7 @@ flex-shrink属性
 
 ##### 100vh底部导航栏不显示问题
 
-![crw9gwsaykt81](assets/crw9gwsaykt81.jpg)
+![crw9gwsaykt81](./assets/crw9gwsaykt81.jpg)
 
 解决
 
@@ -1257,7 +1257,7 @@ div {
 
 可以使用 `box-shadow` 对盒子元素设置阴影，参数为 `水平偏移,垂直偏移,模糊度,颜色` 构成。
 
-<img src="assets/image-20210424071138135.png" alt="image-20210424071138135" style="zoom:50%; float: left;" />
+<img src="./assets/image-20210424071138135.png" alt="image-20210424071138135" style="zoom:50%; float: left;" />
 
 ```text
 box-shadow: 10px 10px 5px rgba(100, 100, 100, .5);
@@ -1929,7 +1929,7 @@ https://www.jianshu.com/p/fed3d2be9783
 
 [GitHub - mirari/v-viewer at v3](https://github.com/mirari/v-viewer/tree/v3) 
 
-<img title="" src="assets/e86d4ff40fe401ecb745cde7dab0f01588ad9f0d.png" alt="a36.png" width="221">
+<img title="" src="./assets/e86d4ff40fe401ecb745cde7dab0f01588ad9f0d.png" alt="a36.png" width="221">
 
 #### 文件上传
 
