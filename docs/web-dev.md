@@ -738,8 +738,6 @@ div {
 
 #### 旋转扭转海报
 
-![](C:\Users\arno7\Pictures\rotate.png)
-
 ```html
 <body>
   <img class="background" src="https://miro.medium.com/max/1400/1*few-89t3Lc5M-WG4qQ8Uqg.jpeg">
