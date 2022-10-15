@@ -1,5 +1,3 @@
-## Arno's Pubic Documents
+# Arno's Documents
 
-- [Resume](./resume)
-
-- [Web Develop](./web-dev)
+#### [Resume](./resume.html)

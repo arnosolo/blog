@@ -702,6 +702,30 @@ https://www.bilibili.com/video/BV1Zy4y1K7SH?p=156
 
 ## CSS
 
+### 实例
+
+#### 旋转动画
+
+```css
+<style lang="scss" scoped>
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin {
+        animation: spin 1.5s linear infinite;
+    }
+</style>
+```
+
+### 语法
+
 ##### em vs rem
 
 - [CSS 的值与单位 - 学习 Web 开发 | MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
