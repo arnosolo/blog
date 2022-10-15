@@ -1440,7 +1440,7 @@ https://www.jianshu.com/p/fed3d2be9783
 
 [GitHub - mirari/v-viewer at v3](https://github.com/mirari/v-viewer/tree/v3) 
 
-<img title="" src="./assets/e86d4ff40fe401ecb745cde7dab0f01588ad9f0d.png" alt="a36.png" width="221">
+<img title="" src="../assets/e86d4ff40fe401ecb745cde7dab0f01588ad9f0d.png" alt="a36.png" width="221">
 
 #### 文件上传
 
