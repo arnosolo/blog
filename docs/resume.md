@@ -1,4 +1,10 @@
-## Arno
+---
+title: Arno
+lang: en-US
+description: Arno Solo, web development, vue, typescript, firebase, 3d printer, cpp, arduino, China, remote
+---
+
+# {{ $frontmatter.title }}
 
 Hello, I'm Arno from China. I was graduated from Ningbo University of Technology. And I know how to
 

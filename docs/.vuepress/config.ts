@@ -3,6 +3,7 @@ import { defaultTheme, defineUserConfig } from 'vuepress'
 export default defineUserConfig({
   title: "Arno's Documents",
   description: "Public documents of Arno Solo",
+  base: `/my-public-docs/`,
   theme: defaultTheme({
     logo: 'logo.svg',
     locales: {
@@ -14,7 +15,6 @@ export default defineUserConfig({
       },
     },
   }),
-  base: `/my-public-docs/`,
   locales: {
     '/': {
       lang: 'en-US',
