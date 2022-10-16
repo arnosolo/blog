@@ -6,47 +6,33 @@ description: Arno Solo, web development, vue, typescript, firebase, 3d printer, 
 
 # {{ $frontmatter.title }}
 
-Hello, I'm Arno from China. I was graduated from Ningbo University of Technology. And I know how to
-
-- Speak `Mandarin` and `English`. 
-
-- Write a web page with  `Vue`  / `Typescript` / `Firebase` 
+Hello, I'm Arno from China. I was graduated from Ningbo University of Technology. And I know how to develop a **website** with *Vue*  / *Typescript* / *Firebase*.
 
 ### AiPassportPhoto
 
-[AiPassportPhoto](http://aipassportphoto.com/) is a website that can help you create Passport Photo. And I'm helping the owner to add some new features and debugging, also building v2 version.
+[AiPassportPhoto](http://aipassportphoto.com/) is a website that can turn a normal photo into a passport photo. And I'm responsible for the frontend.
+
+- vue / ts / uno css
 
 ![aipassport.png](./assets/6a3d6e7b26c7043fb071cda6addcea61d73af826.png)
 
-### Bio Band Detection
-
-- Detect contours of an image
-
-- Vue / TS / Tailwind css / AWS / Github Action
-
-- [Link](https://d12zy233hhl7j9.cloudfront.net/) 
-
-![bio-band-detection.png](./assets/ca194fa31bd25c0fe9f2c65ceddcebdee921fe80.png)
-
 ### Unblur Image
 
-- Use AI technology to improve the clarity of a picture, of course, this model is provided by Aliyun
+[This website](https://unblur-image.com/) use AI technology to improve the clarity of a picture
 
-- Vue / TS / Tailwind css / Github Action / Firebase / Aliyun
+- vue / ts / tailwind css / firebase
 
-- [Link](https://unblur-image.com/) 
-
-<img title="" src="./assets/3235c749d8e23722bf5cbb119291f61d3e975a59.png" alt="unblur-image.png" width="297">
+![unblur-image](./assets/unblur-image.png)
 
 ### Simple Gravity Simulator
 
-- A simple gravity simulator build with html `canvas`. [Click here](https://github.com/arnosolo/oversimplified_gravity_simulator) to understand how it works.
+I wrote [this simulator](https://arnosolo.github.io/oversimplified_gravity_simulator/) when I first started learning js. Although it's useless, it's just super fun to look at. You can [click here](https://github.com/arnosolo/oversimplified_gravity_simulator) to understand how it works.
 
 <img title="" src="./assets/2021_6_9下午9_15_45.new.gif" alt="2021_6_9下午9_15_45.new" style="zoom:60%;">
 
 ### Simple 3D printer
 
-- A basic 3d printer firmware for Mega2560. Works but print quality is a little worse than Marlin. [Read more](https://github.com/arnosolo/simple-3d-printer) 
+Before I start learning web development, what I was really interested in was automation equipments. But many years after I left school, I still can't found a relevant internship. So I quit. [This project](https://github.com/arnosolo/simple-3d-printer) is basic 3d printer firmware running on Mega2560 chip. It works but print quality is a little worse than [Marlin](https://github.com/MarlinFirmware/Marlin). I also explained how a 3d printed works on the [readme file](https://github.com/arnosolo/simple-3d-printer#how-3d-printer-works), you can read it if you are interested.
 
 <img title="" src="./assets/small.png" alt="small" style="zoom:55%;" width="785">
 
