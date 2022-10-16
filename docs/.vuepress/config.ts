@@ -4,6 +4,11 @@ export default defineUserConfig({
   title: "Arno's Documents",
   description: "Public documents of Arno Solo",
   base: `/my-public-docs/`,
+  head: [
+    [
+      'link', { rel: 'icon', href: '/my-public-docs/favicon.ico'}
+    ]
+  ],
   theme: defaultTheme({
     logo: 'logo.svg',
     logoDark: 'logo-dark.svg',
