@@ -6,6 +6,7 @@ export default defineUserConfig({
   base: `/my-public-docs/`,
   theme: defaultTheme({
     logo: 'logo.svg',
+    logoDark: 'logo-dark.svg',
     locales: {
       '/': {
         selectLanguageName: 'English',
