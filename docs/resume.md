@@ -1,12 +1,36 @@
 ---
 title: Arno
 lang: en-US
-description: Hello, I'm Arno from China. I was graduated from Ningbo University of Technology. And I know how to develop a website with vue / typescript / firebase.
+description: Hello, I'm Arno from China. I know how to develop a website with vue / typescript / firebase.
 ---
 
 # {{ $frontmatter.title }}
 
 {{ $frontmatter.description }}
+
+## Experience
+
+### Frontend Developer
+
+*2022.06 ~ Present* WING SPREAD GROUP LIMITED
+
+Use vite / vue / ts / unocss to build websites
+
+### Project Assistant
+
+*2015.02 ~ 2017.12* Ningbo Fuerda Smartech Co., Ltd.
+
+Audi interior project management (air vent)
+
+- Make sure tools / moulds / testing equipments are ready for production.
+
+## Education
+
+2011.09 ~ 2015.06 Ningbo University of Technology
+
+- Mechanical Engineering
+
+## Projects
 
 ### AiPassportPhoto
 
@@ -36,17 +60,19 @@ Before I start learning web development, what I was really interested in was aut
 
 <img title="" src="./assets/small.png" alt="small" style="zoom:55%;" width="785">
 
-### Others
+## Others
 
-##### Time zone
+### Time zone
 
 - GMT+8
 
-##### Language
+### Language
 
 - English: useable
 - Mandarin: native
 
-##### Email
+### Email
 
 - arno756@outlook.com
+
+### 
