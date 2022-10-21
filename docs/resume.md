@@ -14,7 +14,7 @@ description: Hello, I'm Arno from China. I know how to develop a website with Vu
 
 *2022.06 ~ Present* WING SPREAD GROUP LIMITED
 
-Use Vite / Vue / Ts / Unocss to build websites
+Use Vite / Vue / TS / Unocss to build websites
 
 ### Project Assistant
 
@@ -36,7 +36,7 @@ Audi interior project management (air vent)
 
 [AiPassportPhoto](http://aipassportphoto.com/) is a website that can turn a normal photo into a passport photo. And I'm responsible for the frontend.
 
-- Build with Vite / Vue3 / Ts / Unocss
+- Build with Vite / Vue3 / TS / Unocss
 
 - Support **Auto deploy** with Github Action
 
