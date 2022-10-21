@@ -1,7 +1,7 @@
 ---
 title: Arno
 lang: en-US
-description: Hello, I'm Arno from China. I know how to develop a website with vue / typescript / firebase.
+description: Hello, I'm Arno from China. I know how to develop a website with Vue / Typescript / Firebase.
 ---
 
 # {{ $frontmatter.title }}
@@ -14,7 +14,7 @@ description: Hello, I'm Arno from China. I know how to develop a website with vu
 
 *2022.06 ~ Present* WING SPREAD GROUP LIMITED
 
-Use vite / vue / ts / unocss to build websites
+Use Vite / Vue / Ts / Unocss to build websites
 
 ### Project Assistant
 
@@ -36,17 +36,17 @@ Audi interior project management (air vent)
 
 [AiPassportPhoto](http://aipassportphoto.com/) is a website that can turn a normal photo into a passport photo. And I'm responsible for the frontend.
 
-- vue / ts / uno css
+- Build with Vite / Vue3 / Ts / Unocss
+
+- Support **Auto deploy** with Github Action
+
+- Support **Multi-language** with vue-i18n
+
+- Support **Global CDN** with Aws Cloudfront and Aws S3
+
+- Support **Static site generation** with vite-ssg
 
 ![aipassport.png](./assets/6a3d6e7b26c7043fb071cda6addcea61d73af826.png)
-
-### Unblur Image
-
-[This website](https://unblur-image.com/) use AI technology to improve the clarity of a picture
-
-- vue / ts / tailwind css / firebase
-
-![unblur-image](./assets/unblur-image.png)
 
 ### Simple Gravity Simulator
 
