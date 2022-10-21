@@ -1,8 +1,39 @@
-## JS
 
-### 实例
 
-##### 元素是否在可见区域
+## 实例
+
+#### 将回调函数封装为Promise
+
+```ts
+/* 创建图片 Base64 */
+export function createImageBase64ByUrl(
+    url: string,
+    outputType: 'png' | 'jpeg' = 'jpeg',
+) {
+    const img = new Image();
+    img.setAttribute('crossOrigin', 'anonymous');
+    img.src = url;
+
+    return new Promise<string>((resolve, reject) => {
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            ctx!.drawImage(img, 0, 0);
+            const dataURL = canvas.toDataURL(`image/${outputType}`);
+
+            resolve(dataURL);
+        };
+
+        img.onerror = (err) => {
+            reject(err);
+        };
+    });
+}
+```
+
+#### 元素是否在可见区域
 
 ```ts
 // 1. vue use 库
@@ -109,7 +140,9 @@ console.log(message); // "hi!"，而不是 ""
 
 [正则什么的，你让我写，我会难受，你让我用，真香！ - 掘金](https://juejin.cn/post/7111857333113716750#heading-12)
 
-### 语法
+## 语法
+
+
 
 ### 字符串
 
