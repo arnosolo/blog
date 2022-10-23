@@ -24,12 +24,12 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Arno',
+      title: 'Arno\'s documents',
       description: 'Public documents of Arno Solo',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: '阿诺',
+      title: '阿诺的文档',
       description: '孤独阿诺的公开文档',
     },
   }
