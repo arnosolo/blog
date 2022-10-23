@@ -23,6 +23,6 @@ footer: MIT Licensed | Copyright © 2022-present Arno Solo
 
 Hello, I'm Arno from China. I was graduated from Ningbo University of Technology. And I know how to develop a website with vue / typescript / firebase.
 
-### [How 3d printer works?](./how-3d-printer-works.html)
+### [How 3d printer works? ](https://arnosolo.github.io/simple-3d-printer/)
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
