@@ -32,3 +32,7 @@ footer: MIT Licensed | Copyright © 2022-present Arno Solo
 ### [3D打印机是如何工作的? ](https://arnosolo.github.io/simple-3d-printer/)
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
+
+### [vscode / vite / vue3 / ts 项目代码自动格式化](./auto-code-format-vue-ts.html)
+
+在保存时自动格式化代码, 适用于 vscode / vite / vue3 / ts 项目.
