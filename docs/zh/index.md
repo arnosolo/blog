@@ -21,13 +21,13 @@ footer: MIT Licensed | Copyright © 2022-present Arno Solo
 
 ### [阿诺的简历](./resume.html)
 
-✔ 汽车内饰开发经验(奥迪)
+- 熟练使用 Vue / TS / Firebase 构建网页
 
-✔ 编写网页(Vue / TS / Firebase)
+- 熟练使用 Canvas 进行绘图
 
-✔ 单片机(写过3d打印机固件)
+- 熟练使用 Git 进行版本管理与代码提交
 
-✔ 英语流利
+- 重视文档与注释的编写
 
 ### [3D打印机是如何工作的? ](https://arnosolo.github.io/simple-3d-printer/)
 
