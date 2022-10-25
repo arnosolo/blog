@@ -58,7 +58,7 @@ I wrote [this simulator](https://arnosolo.github.io/oversimplified_gravity_simul
 
 Before I start learning web development, what I was really interested in was automation equipments. But many years after I left school, I still can't found a relevant internship. So I quit. [This project](https://github.com/arnosolo/simple-3d-printer) is basic 3d printer firmware running on Mega2560 chip. It works but print quality is a little worse than [Marlin](https://github.com/MarlinFirmware/Marlin). I also explained how a 3d printed works on the [readme file](https://github.com/arnosolo/simple-3d-printer#how-3d-printer-works), you can read it if you are interested.
 
-<img title="" src="./assets/small.png" alt="small" style="zoom:55%;" width="785">
+<img title="" src="./assets/a-lot-xyz-cubes.png" alt="a-lot-xyz-cubes" style="zoom:55%;" width="785">
 
 ## Others
 
