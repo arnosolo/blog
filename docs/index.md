@@ -2,7 +2,7 @@
 home: true
 title: Home Page
 heroImage: /avatar-1-rounded.png
-footer: MIT Licensed | Copyright © 2022-present Arno Solo
+footer: Copyright © 2022-present Arno Solo
 ---
 
 ### [Arno - Frontend developer](./resume.html)
