@@ -1,12 +1,22 @@
 ---
 title: Arno
 lang: en-US
-description: Hello, I'm Arno from China. I know how to develop a website with Vue / Typescript / Firebase.
+description: Hello, I'm Arno from China. I‘m a frontend developer. I know how to develop a website with Vue / Typescript / Firebase.
 ---
 
 # {{ $frontmatter.title }}
 
-{{ $frontmatter.description }}
+> Frontend developer
+
+- Build website with `Vue` / `TS` / `Firebase`
+
+- Familiar with `Canvas`
+
+- Familiar with `Git`
+
+- Understand the importance of documentation
+
+- Understand English
 
 ## Experience
 
@@ -14,15 +24,13 @@ description: Hello, I'm Arno from China. I know how to develop a website with Vu
 
 *2022.06 ~ Present* WING SPREAD GROUP LIMITED
 
-Use Vite / Vue / TS / Unocss to build websites
+- Use Vite / Vue / TS / Unocss to build websites, more in [projects section](#Projects)
 
 ### Project Assistant
 
 *2015.02 ~ 2017.12* Ningbo Fuerda Smartech Co., Ltd.
 
-Audi interior project management (air vent)
-
-- Make sure tools / moulds / testing equipments are ready for production.
+- Audi interior project management (air vent)
 
 ## Education
 
@@ -48,6 +56,8 @@ Audi interior project management (air vent)
 
 ![aipassport.png](./assets/6a3d6e7b26c7043fb071cda6addcea61d73af826.png)
 
+## Individual works
+
 ### Simple Gravity Simulator
 
 I wrote [this simulator](https://arnosolo.github.io/oversimplified_gravity_simulator/) when I first started learning js. Although it's useless, it's just super fun to look at. You can [click here](https://github.com/arnosolo/oversimplified_gravity_simulator) to understand how it works.
@@ -64,15 +74,12 @@ Before I start learning web development, what I was really interested in was aut
 
 ### Time zone
 
-- GMT+8
-
-### Language
-
-- English: useable
-- Mandarin: native
+GMT+8
 
 ### Email
 
-- arno756@outlook.com
+<a href=mailto:arno756@outlook.com>arno756@outlook.com</a>
 
-### 
+### Nationality
+
+Chinese resident

@@ -19,7 +19,7 @@ heroImage: /avatar-1-rounded.png
 footer: MIT Licensed | Copyright © 2022-present Arno Solo
 ---
 
-### [阿诺的简历](./resume.html)
+### [黄山 - 前端工程师](./resume.html)
 
 > 前端工程师
 

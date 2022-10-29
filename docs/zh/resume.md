@@ -1,7 +1,7 @@
 ---
 title: 黄山
 lang: zh-CN
-description: 黄山的简历, 前端工程师, 网页开发, 项目经理, 汽车内饰开发, 嵌入式工程师, 单片机程序开发, 翻译, 英文文档翻译
+description: 你好, 我是黄山, 来自中国. 我是一名前端工程师. 我会使用 Vue / TS / Firebase 来开发网站.
 ---
 
 # {{ $frontmatter.title }}
