@@ -27,3 +27,7 @@ footer: Copyright © 2022-present Arno Solo
 ### [ffmpeg 使用方法](./how-to-use-ffmpeg.html)
 
 ffmpeg是一款常被用于音视频转换的命令行工具. 比如说, 将视频转换为音频或者是gif.
+
+### [如何使用svg标签将文字转换为图片](./how-to-convert-text-to-image-with-svg-tag.html)
+
+使用svg标签将文字转换为图片, 而且文字还能居中和自动换行.

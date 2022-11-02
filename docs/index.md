@@ -22,3 +22,7 @@ footer: Copyright © 2022-present Arno Solo
 ### [How 3d printer works? ](https://arnosolo.github.io/simple-3d-printer/)
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
+
+### [How to convert text into image with svg tag.](./how-to-convert-text-to-image-with-svg-tag.html)
+
+Convert text into image with svg tag. The text is centered and able to wraps automatically.
