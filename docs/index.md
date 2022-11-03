@@ -23,6 +23,10 @@ footer: Copyright © 2022-present Arno Solo
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
 
+### [How to convert a string to a number between A and B](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
+
+Use js to convert a string to a number between A and B. Moreover, entering the same string will output a fixed number.
+
 ### [How to convert text into image with svg tag.](./how-to-convert-text-to-image-with-svg-tag.html)
 
 Convert text into image with svg tag. The text is centered and able to wraps automatically.

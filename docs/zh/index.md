@@ -23,6 +23,10 @@ footer: Copyright © 2022-present Arno Solo
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
 
+### [如何将一串字符串转为A到B之间的一个数](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
+
+将字符串转为A到B之间的一个数. 而且来说, 输入相同的字符串会输出固定的数.
+
 ### [如何使用svg标签将文字转换为图片](./how-to-convert-text-to-image-with-svg-tag.html)
 
 使用svg标签将文字转换为图片, 而且文字还能居中和自动换行.
