@@ -26,3 +26,7 @@ footer: Copyright © 2022-present Arno Solo
 ### [How to convert text into image with svg tag.](./how-to-convert-text-to-image-with-svg-tag.html)
 
 Convert text into image with svg tag. The text is centered and able to wraps automatically.
+
+### [How to use js object to store key values pairs](./how-to-save-key-value-using-js-object.html)
+
+Use js object to store key values pairs. To be precise, use the typescript Record type instead of any to store key values pairs to provide better code hints and type checking.
