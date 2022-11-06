@@ -1,12 +1,10 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
-  title: "Arno's Documents",
-  description: "Public documents of Arno Solo",
-  base: `/my-public-docs/`,
+  base: `/blog/`,
   head: [
     [
-      'link', { rel: 'icon', href: '/my-public-docs/favicon.ico'}
+      'link', { rel: 'icon', href: '/blog/logo.svg'}
     ]
   ],
   theme: defaultTheme({
@@ -24,12 +22,12 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Arno\'s documents',
+      title: 'Arno\'s blog',
       description: 'Public documents of Arno Solo',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: '阿诺的文档',
+      title: '阿诺的博客',
       description: '孤独阿诺的公开文档',
     },
   }

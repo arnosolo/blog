@@ -1,12 +1,12 @@
 ##### Github
 
-[GitHub - arnosolo/my-public-docs](https://github.com/arnosolo/my-public-docs)
+[GitHub - arnosolo/blog](https://github.com/arnosolo/blog)
 
 ##### Delploy page
 
-https://arnosolo.github.io/my-public-docs/resume.html
+https://arnosolo.github.io/blog/resume.html
 
-https://arnosolo.github.io/my-public-docs/
+https://arnosolo.github.io/blog/
 
 ##### dev
 
