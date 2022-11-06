@@ -9,9 +9,7 @@ footer: Copyright © 2022-present Arno Solo
 
 > Frontend developer
 
-- Build website with `Vue` / `TS` / `Firebase`
-
-- Familiar with `Canvas`
+- Build website with `Vue` / `React` / `TS` / `Firebase`
 
 - Familiar with `Git`
 

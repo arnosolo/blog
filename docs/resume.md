@@ -8,9 +8,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 > Frontend developer
 
-- Build website with `Vue` / `TS` / `Firebase`
-
-- Familiar with `Canvas`
+- Build website with `Vue` / `React` / `TS` / `Firebase`
 
 - Familiar with `Git`
 

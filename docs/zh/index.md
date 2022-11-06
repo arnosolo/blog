@@ -9,9 +9,7 @@ footer: Copyright © 2022-present Arno Solo
 
 > 前端工程师
 
-- 熟练使用 `Vue` / `TS` / `Firebase` 构建网页
-
-- 熟练使用 `Canvas` 进行绘图
+- 熟练使用 `Vue` / `React` / `TS` / `Firebase` 构建网页
 
 - 熟练使用 `Git` 进行版本管理与代码提交
 
