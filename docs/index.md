@@ -21,6 +21,10 @@ footer: Copyright © 2022-present Arno Solo
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
 
+### [Vue project auto code formatting](./auto-code-format-vue-ts.html)
+
+Automatically format code on save in vscode / vite / vue3 / ts project.
+
 ### [How to convert a string to a number between A and B](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
 
 Use js to convert a string to a number between A and B. Moreover, entering the same string will output a fixed number.

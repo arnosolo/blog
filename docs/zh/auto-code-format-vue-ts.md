@@ -1,5 +1,5 @@
 ---
-title: vscode / vite / vue3 / ts 项目代码自动格式化
+title: Vue项目代码自动格式化
 lang: zh-CN
 description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 / ts 项目.
 ---
@@ -8,7 +8,9 @@ description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 /
 
 # {{ $frontmatter.title }}
 
-{{ $frontmatter.description }} [code link](https://github.com/arnosolo/auto-code-format-vue-ts) 
+{{ $frontmatter.description }}
+
+## 创建项目
 
 1. 创建项目, 选择 vue + ts
   
@@ -16,254 +18,48 @@ description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 /
   npm create vite@latest
   ```
   
-2. 安装依赖, 启动开发模式
+2. 安装依赖, 启动开发模式, 保证开发页面是能打开的
   
   ```bash
-  npm install
-  npm run dev
+  npm install && npm run dev
   ```
+
+## 安装eslint
+
+> [ESlint 主页](https://eslint.org/)
+
+1. 运行以下命令
+
+   ```bash
+   npm init @eslint/config
+   ```
+
+2. 依次选择
+
+   1. To check syntax, find problems, and enforce code style
+   2. JavaScript modules (import/export)
+   3. Vue.js
+   4. Does your project use TypeScript? › Yes
+   5. Browser
+   6. Use a popular style guide
+   7. Which style guide do you want to follow? Standard
+   8. What format do you want your config file to be in? JavaScript
+
+3. 选好了会开始一通安装, 完成后会自动生成一个`.eslintrc.cjs`文件, 此时eslint就安装好了. 默认情况下字符串用双引号eslint会报错. 
+
+    ```ts
+    // src/App.vue
+    const hi = "sdd"
+    ```
+   
+   ![](../assets/Strings%20must%20use%20singlequote.png)
+
+4. 但如果你发现没有报错的话, 那是因为你还没有没有安装eslint插件. 你将需要去插件商店搜索 `dbaeumer.vscode-eslint` 并安装它, 然后你就能看到那沁人心脾的小红线了.
+
+
+## 保存时自动格式化
   
-3. 确认项目可以启动后, 在`package.json`中代码检查相关的库
-  
-  ```json
-  "devDependencies": {
-      "eslint": "^8.23.0",
-      "@antfu/eslint-config": "^0.26.3",
-      "lint-staged": "^13.0.3",
-      "stylelint": "^14.11.0",
-      "stylelint-config-recommended-vue": "^1.4.0",
-      "stylelint-order": "^5.0.0"
-    }
-  ```
-  
-4. 安装库
-  
-  ```bash
-  npm i
-  ```
-  
-5. 添加四个代码检查的配置文件
-  
-  .editorconfig
-  
-  ```
-  root = true
-  
-  [*]
-  charset = utf-8
-  indent_style = space
-  indent_size = 4
-  end_of_line = lf
-  insert_final_newline = true
-  trim_trailing_whitespace = true
-  
-  [*.{yml,yaml,json}]
-  indent_style = space
-  indent_size = 2
-  ```
-  
-  .eslintignore
-  
-  ```
-  *.sh
-  node_modules
-  *.md
-  *.woff
-  *.ttf
-  .vscode
-  .idea
-  dist
-  /public
-  /docs
-  .husky
-  .local
-  /bin
-  Dockerfile
-  ```
-  
-  .eslintrc
-  
-  ```
-  {
-      "extends": [
-          "@antfu"
-      ],
-      "overrides": [
-          {
-              "files": ["*.vue"],
-              "rules": {
-                  "indent": "off",
-                  "curly": ["error", "all"],
-                  "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-                  "@typescript-eslint/indent": "off",
-                  "@typescript-eslint/semi": ["error", "always"],
-                  "@typescript-eslint/brace-style": ["error", "1tbs"],
-                  "vue/html-indent": ["error", 4],
-                  "vue/component-name-in-template-casing": ["error", "kebab-case", {
-                      "registeredComponentsOnly": false,
-                      "ignores": []
-                  }],
-                  "vue/component-tags-order": ["error", {
-                      "order": [ [ "template", "script" ], "style" ]
-                  }],
-                  "vue/script-indent": ["error", 4, { "baseIndent": 1 }],
-                  "@typescript-eslint/member-delimiter-style": ["error", {
-                      "multiline": {
-                          "delimiter": "semi",
-                          "requireLast": true
-                      },
-                      "singleline": {
-                          "delimiter": "semi",
-                          "requireLast": false
-                      },
-                      "multilineDetection": "brackets"
-                  }]
-              }
-          },
-          {
-              "files": ["*.ts"],
-              "rules": {
-                  "curly": ["error", "all"],
-                  "no-console": "off",
-                  "@typescript-eslint/brace-style": ["error", "1tbs"],
-                  "@typescript-eslint/indent": ["error", 4],
-                  "@typescript-eslint/semi": ["error", "always"],
-                  "@typescript-eslint/member-delimiter-style": ["error", {
-                      "multiline": {
-                          "delimiter": "semi",
-                          "requireLast": true
-                      },
-                      "singleline": {
-                          "delimiter": "semi",
-                          "requireLast": false
-                      },
-                      "multilineDetection": "brackets"
-                  }],
-                  "@typescript-eslint/quotes": ["error", "single", { "allowTemplateLiterals": true }]
-              }
-          }
-      ]
-  }
-  ```
-  
-  .stylelintrc
-  
-  ```
-  {
-      "extends": [
-          "stylelint-config-standard-scss",
-          "stylelint-config-recommended-vue"
-      ],
-      "plugins": [
-          "stylelint-order"
-      ],
-      "overrides": [{
-              "files": ["**/*.(scss|css|html|vue)"],
-              "customSyntax": "postcss-scss"
-          },
-          {
-              "files": ["**/*.(html|vue)"],
-              "customSyntax": "postcss-html"
-          }
-      ],
-      "rules": {
-          "function-no-unknown": null,
-          "selector-class-pattern": null,
-          "selector-pseudo-class-no-unknown": [
-              true,
-              {
-                  "ignorePseudoClasses": [
-                      "global"
-                  ]
-              }
-          ],
-          "selector-pseudo-element-no-unknown": [
-              true,
-              {
-                  "ignorePseudoElements": [
-                      "v-deep"
-                  ]
-              }
-          ],
-          "at-rule-no-unknown": [
-              true,
-              {
-                  "ignoreAtRules": [
-                      "tailwind",
-                      "apply",
-                      "variants",
-                      "responsive",
-                      "screen",
-                      "function",
-                      "if",
-                      "each",
-                      "include",
-                      "mixin"
-                  ]
-              }
-          ],
-          "no-empty-source": null,
-          "string-quotes": null,
-          "named-grid-areas-no-invalid": null,
-          "unicode-bom": "never",
-          "no-descending-specificity": null,
-          "font-family-no-missing-generic-family-keyword": null,
-          "declaration-colon-space-after": "always-single-line",
-          "declaration-colon-space-before": "never",
-          "rule-empty-line-before": [
-              "always",
-              {
-                  "ignore": [
-                      "after-comment",
-                      "first-nested"
-                  ]
-              }
-          ],
-          "order/order": [
-              [
-                  "dollar-variables",
-                  "custom-properties",
-                  "at-rules",
-                  "declarations",
-                  {
-                      "type": "at-rule",
-                      "name": "supports"
-                  },
-                  {
-                      "type": "at-rule",
-                      "name": "media"
-                  },
-                  "rules"
-              ],
-              {
-                  "severity": "warning"
-              }
-          ],
-          "indentation": 4,
-          "alpha-value-notation": "number",
-          "color-function-notation": "legacy"
-      },
-      "ignoreFiles": [
-          "**/*.js",
-          "**/*.ts"
-      ]
-  }
-  ```
-  
-6. 在`.vscode\extensions.json`写下用到的vscode插件
-  
-  ```json
-  {
-    "recommendations": [
-      "dbaeumer.vscode-eslint",
-      "vue.volar",
-      "streetsidesoftware.code-spell-checker",
-      "stylelint.vscode-stylelint"
-    ]
-  }
-  ```
-  
-7. 在`.vscode\settings.json`增加一项保存时自动整理代码的配置
+1. 创建`.vscode/settings.json`, 内容如下.
   
   ```json
   {
@@ -275,4 +71,12 @@ description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 /
   }
   ```
   
-8. 现在保存时, vscode就会自动整理代码了
+2. 现在保存时, vscode就会自动整理代码了
+
+## ESlint文档
+
+这两个文档中记录了代码检查的详细说明, 你将很快用到
+
+[eslint-plugin-vue](https://eslint.vuejs.org/rules/multi-word-component-names.html)
+
+[TypeScript ESLint](https://typescript-eslint.io/)

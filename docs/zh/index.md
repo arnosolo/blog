@@ -21,6 +21,10 @@ footer: Copyright © 2022-present Arno Solo
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
 
+### [Vue项目代码自动格式化](./auto-code-format-vue-ts.html)
+
+在保存时自动格式化代码. 适用于 vscode / vite / vue3 / ts 项目.
+
 ### [如何将一串字符串转为A到B之间的一个数](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
 
 将字符串转为A到B之间的一个数. 而且来说, 输入相同的字符串会输出固定的数.
