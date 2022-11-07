@@ -4,11 +4,11 @@ lang: zh-CN
 description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 / ts 项目.
 ---
 
-![](../assets/auto-code-format-vue-ts.gif)
-
 # {{ $frontmatter.title }}
 
 {{ $frontmatter.description }}
+
+![](../assets/eslint-fix-all-on-save.gif)
 
 ## 创建项目
 
@@ -61,15 +61,14 @@ description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 /
   
 1. 创建`.vscode/settings.json`, 内容如下.
   
-  ```json
-  {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true
-    },
-    "editor.formatOnSave": false
-  }
-  ```
+    ```json
+    {
+      "eslint.enable": true,
+      "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+      }
+    }
+    ```
   
 2. 现在保存时, vscode就会自动整理代码了
 

@@ -4,11 +4,11 @@ lang: en-US
 description: Automatically format code on save in vscode / vite / vue3 / ts project.
 ---
 
-![](./assets/auto-code-format-vue-ts.gif)
-
 # {{ $frontmatter.title }}
 
 {{ $frontmatter.description }}
+
+![](./assets/eslint-fix-all-on-save.gif)
 
 ## Create empty project
 
@@ -61,15 +61,14 @@ description: Automatically format code on save in vscode / vite / vue3 / ts proj
   
 1. Create `.vscode/settings.json`
   
-  ```json
-  {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true
-    },
-    "editor.formatOnSave": false
-  }
-  ```
+    ```json
+    {
+      "eslint.enable": true,
+      "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+      }
+    }
+    ```
   
 2. Now when you save, vscode will automatically organize the code
 
