@@ -21,6 +21,10 @@ footer: Copyright © 2022-present Arno Solo
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
 
+### [A better way to pass parameters to functions](./smart-functionparameters-in-javascript.html)
+
+If a function requires 4 arguments, then we need to pass in 4 arguments, even if the middle argument is not needed in some cases. So can you pass in a few parameters if you need a few parameters? Yes, you will know after reading this article.
+
 ### [Vue project auto code formatting](./auto-code-format-vue-ts.html)
 
 Automatically format code on save in vscode / vite / vue3 / ts project.

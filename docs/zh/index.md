@@ -21,6 +21,17 @@ footer: Copyright © 2022-present Arno Solo
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
 
+### [更优秀的函数传参方式](./smart-functionparameters-in-javascript.html)
+
+如果一个函数需要4个参数, 那么我们就需要传入4个参数, 即使中间的参数在一些情况下不需要. 那么能不能做到需要几个参数就传入几个参数呢? 可以, 读了本文你就知道了.
+
+```ts
+// 👎 普通的传参方式
+printTodo('Learn Swift', undefined, undefined, ['learning']);
+// 👍 更佳的传参方式
+printTodo({title: 'Learn Swift', tags: ['learning']});
+```
+
 ### [Vue项目代码自动格式化](./auto-code-format-vue-ts.html)
 
 在保存时自动格式化代码. 适用于 vscode / vite / vue3 / ts 项目.
