@@ -52,7 +52,7 @@ description: Automatically format code on save in vscode / vite / vue3 / ts proj
     const hi = "sdd"
     ```
    
-   ![](../assets/Strings%20must%20use%20singlequote.png)
+   ![](./assets/Strings-must-use-singlequote.png)
 
 4. If you find that there is no error report, it is because you have not installed the eslint plugin. You will need to go to the plugin store to search and install `dbaeumer.vscode-eslint`
 

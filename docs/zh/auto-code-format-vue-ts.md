@@ -52,7 +52,7 @@ description: 在保存时自动格式化代码, 适用于 vscode / vite / vue3 /
     const hi = "sdd"
     ```
    
-   ![](../assets/Strings%20must%20use%20singlequote.png)
+   ![](../assets/Strings-must-use-singlequote.png)
 
 4. 但如果你发现没有报错的话, 那是因为你还没有没有安装eslint插件. 你将需要去插件商店搜索 `dbaeumer.vscode-eslint` 并安装它, 然后你就能看到那沁人心脾的小红线了.
 
