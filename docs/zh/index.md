@@ -21,6 +21,12 @@ footer: Copyright © 2022-present Arno Solo
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
 
+### [如何从零开始搭建一个PWA应用](./how-to-build-a-pwa-form-scratch.html)
+
+读完本文, 您将掌握如何搭建一个最简单的PWA(渐进式网页应用)
+
+<img src="../assets/1eb4e20090dc47c3ffc4a62be39d7337ad742822.png" title="" alt="Snipaste_2022-11-09_10-27-00.png" width="378">
+
 ### [更优秀的函数传参方式](./smart-functionparameters-in-javascript.html)
 
 如果一个函数需要4个参数, 那么我们就需要传入4个参数, 即使中间的参数在一些情况下不需要. 那么能不能做到需要几个参数就传入几个参数呢? 可以, 读了本文你就知道了.
