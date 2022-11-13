@@ -5,8 +5,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 ---
 
 # {{ $frontmatter.title }}
-
-**Fullstack developer**
+> Fullstack developer
 
 - Frontend `Vue` / `React` + `TS`
 
@@ -20,7 +19,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 ## Experience
 
-### Frontend Developer
+### Fullstack Developer
 
 *2022.06 ~ Present* WING SPREAD GROUP LIMITED
 

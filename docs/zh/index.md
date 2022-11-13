@@ -6,8 +6,7 @@ footer: Copyright © 2022-present Arno Solo
 ---
 
 ### [黄山 - 全栈工程师](./resume.html)
-
-**全栈工程师**
+> 全栈工程师
 
 - 前端 `Vue` / `React` + `TS`
 

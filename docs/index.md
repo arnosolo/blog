@@ -6,8 +6,7 @@ footer: Copyright © 2022-present Arno Solo
 ---
 
 ### [Arno - Fullstack developer](./resume.html)
-
-**Fullstack developer**
+> Fullstack developer
 
 - Frontend `Vue` / `React` + `TS`
 
