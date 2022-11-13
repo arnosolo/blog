@@ -7,9 +7,11 @@ footer: Copyright © 2022-present Arno Solo
 
 ### [黄山 - 前端工程师](./resume.html)
 
-> 前端工程师
+**全栈工程师**
 
-- 熟练使用 `Vue` / `React` / `TS` / `Firebase` 构建网页
+- 前端 `Vue` / `React` + `TS`
+
+- 后端 `Firebase` 或者 `Mongodb` + `Express` + `TS` + `Docker`
 
 - 熟练使用 `Git` 进行版本管理与代码提交
 

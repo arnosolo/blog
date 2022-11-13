@@ -7,9 +7,11 @@ footer: Copyright © 2022-present Arno Solo
 
 ### [Arno - Frontend developer](./resume.html)
 
-> Frontend developer
+**Fullstack developer**
 
-- Build website with `Vue` / `React` / `TS` / `Firebase`
+- Frontend `Vue` / `React` + `TS`
+
+- Backend `Firebase` or `Mongodb` + `Express` + `TS` + `Docker`
 
 - Familiar with `Git`
 
@@ -24,6 +26,13 @@ footer: Copyright © 2022-present Arno Solo
 ### [A better way to pass parameters to functions](./smart-functionparameters-in-javascript.html)
 
 If a function requires 4 arguments, then we need to pass in 4 arguments, even if the middle argument is not needed in some cases. So can you pass in a few parameters if you need a few parameters? Yes, you will know after reading this article.
+
+```ts
+// 👎 Ordinary way of passing parameters
+printTodo('Learn Swift', undefined, undefined, ['learning']);
+// 👍 Pass in only the parameters needed
+printTodo({title: 'Learn Swift', tags: ['learning']});
+```
 
 ### [Vue project auto code formatting](./auto-code-format-vue-ts.html)
 
