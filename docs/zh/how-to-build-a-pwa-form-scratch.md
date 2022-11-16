@@ -43,32 +43,33 @@ service-worker.js // 哪些资源需要缓存, 哪些则是从网络获取
 <img src="../assets/2022-11-09-12-02-01-image.png" title="" alt="" width="242">
 
 1. 网页 index.html
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>PWA TEST</title>
-        <style>
-            .w-custom {
-                width: 5rem;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>PWA TEST</h1>
-        <img src="./logo.svg" alt="logo" class="w-custom">
-        <script src="./index.js" type="module"></script>
-    </body>
-    </html>
-    ```
+   
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <title>PWA TEST</title>
+       <style>
+           .w-custom {
+               width: 5rem;
+           }
+       </style>
+   </head>
+   <body>
+       <h1>PWA TEST</h1>
+       <img src="./logo.svg" alt="logo" class="w-custom">
+       <script src="./index.js" type="module"></script>
+   </body>
+   </html>
+   ```
 
 2. 使用express服务广播网页(可选)
    
     ::: details 点击查看详细步骤
+   
    - 安装express
      
      ```bash
@@ -91,7 +92,8 @@ service-worker.js // 哪些资源需要缓存, 哪些则是从网络获取
      ```bash
      node server.js
      ```
-    :::
+     
+     :::
 
 3. 现在访问 http://localhost:8080/ 就能看到网页内容了. 但是它还是一个简单的网页, 所以如果我们使用`Lighthouse`进行检测的话, 会发现它尚不支持PWA
 
@@ -100,48 +102,50 @@ service-worker.js // 哪些资源需要缓存, 哪些则是从网络获取
 ### 增加manifest.json
 
 1. 首先我们需要在项目中增加一个用于描述应用图标信息的`manifest.json`. 注意, 其中的**icons**属性是**必填**项目, 您可以选择自己制作各个尺寸的应用图标或者使用以下命令自动生成.
-
-    ```bash
-    npx pwa-asset-generator ./logo.svg icons
-    ```
-
+   
+   ```bash
+   npx pwa-asset-generator ./logo.svg icons
+   ```
+   
     ::: details 点击展开 manifest.json
-    ```json
-    {
-        "name": "Try PWA",
-        "start_url": "/",
-        "icons": [
-            {
-                "src": "icons/manifest-icon-192.maskable.png",
-                "sizes": "192x192",
-                "type": "image/png",
-                "purpose": "any"
-            },
-            {
-                "src": "icons/manifest-icon-192.maskable.png",
-                "sizes": "192x192",
-                "type": "image/png",
-                "purpose": "maskable"
-            },
-            {
-                "src": "icons/manifest-icon-512.maskable.png",
-                "sizes": "512x512",
-                "type": "image/png",
-                "purpose": "any"
-            },
-            {
-                "src": "icons/manifest-icon-512.maskable.png",
-                "sizes": "512x512",
-                "type": "image/png",
-                "purpose": "maskable"
-            }
-        ],
-        "theme_color": "#5983ff",
-        "background_color": "#ffffff",
-        "display": "fullscreen",
-        "orientation": "portrait"
-    }
-    ```
+   
+   ```json
+   {
+       "name": "Try PWA",
+       "start_url": "/",
+       "icons": [
+           {
+               "src": "icons/manifest-icon-192.maskable.png",
+               "sizes": "192x192",
+               "type": "image/png",
+               "purpose": "any"
+           },
+           {
+               "src": "icons/manifest-icon-192.maskable.png",
+               "sizes": "192x192",
+               "type": "image/png",
+               "purpose": "maskable"
+           },
+           {
+               "src": "icons/manifest-icon-512.maskable.png",
+               "sizes": "512x512",
+               "type": "image/png",
+               "purpose": "any"
+           },
+           {
+               "src": "icons/manifest-icon-512.maskable.png",
+               "sizes": "512x512",
+               "type": "image/png",
+               "purpose": "maskable"
+           }
+       ],
+       "theme_color": "#5983ff",
+       "background_color": "#ffffff",
+       "display": "fullscreen",
+       "orientation": "portrait"
+   }
+   ```
+   
     :::
 
 2. 其次, 我们将需要在index.html中引入这个文件
@@ -154,23 +158,23 @@ service-worker.js // 哪些资源需要缓存, 哪些则是从网络获取
 ### 增加service-worker.js
 
 1. 首次, 我们需要向项目中添加`service-worker.js`文件
-
-    > [Service workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API)是由浏览器实现的一个API.  它本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验.
-
+   
+   > [Service workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API)是由浏览器实现的一个API.  它本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验.
+   
     你会注意到我们引入了一个[Workbox](https://developer.chrome.com/docs/workbox/)的库. 这个库可以使我们更便捷地操作 [Service workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API) API. 比如说, 在下面这段程序中, workbox设置了如果浏览器需要访问图片的话, 将会优先在缓存中获取.
-
-    ```js
-    // service-worker.js
-    importScripts(
-        'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
-    );
-
-    workbox.routing.registerRoute(
-        ({request}) => request.destination === 'image',
-        new workbox.strategies.CacheFirst() // 优先在缓存中获取图片
-        // new workbox.strategies.NetworkFirst() // 优先从网络获取
-    )
-    ```
+   
+   ```js
+   // service-worker.js
+   importScripts(
+       'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+   );
+   
+   workbox.routing.registerRoute(
+       ({request}) => request.destination === 'image',
+       new workbox.strategies.CacheFirst() // 优先在缓存中获取图片
+       // new workbox.strategies.NetworkFirst() // 优先从网络获取
+   )
+   ```
 
 2. 而后, 我们将在index.js中注册这个配置
    

@@ -5,8 +5,8 @@ heroImage: /avatar-1-rounded.png
 footer: Copyright © 2022-present Arno Solo
 ---
 
-### [Arno - Fullstack developer](./resume.html)
-> Fullstack developer
+### [Arno - Frontend developer](./resume.html)
+> Frontend developer
 
 - Frontend `Vue` / `React` + `TS`
 

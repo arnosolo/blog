@@ -5,7 +5,8 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 ---
 
 # {{ $frontmatter.title }}
-> Fullstack developer
+
+> Frontend developer
 
 - Frontend `Vue` / `React` + `TS`
 
