@@ -37,6 +37,8 @@ printTodo({title: 'Learn Swift', tags: ['learning']});
 
 Automatically format code on save in vscode / vite / vue3 / ts project.
 
+![](./assets/eslint-fix-all-on-save.gif)
+
 ### [How to convert a string to a number between A and B](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
 
 Use js to convert a string to a number between A and B. Moreover, entering the same string will output a fixed number.

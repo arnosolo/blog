@@ -43,6 +43,8 @@ printTodo({title: 'Learn Swift', tags: ['learning']});
 
 在保存时自动格式化代码. 适用于 vscode / vite / vue3 / ts 项目.
 
+![](../assets/eslint-fix-all-on-save.gif)
+
 ### [如何将一串字符串转为A到B之间的一个数](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
 
 将字符串转为A到B之间的一个数. 而且来说, 输入相同的字符串会输出固定的数.
