@@ -53,6 +53,8 @@ printTodo({title: 'Learn Swift', tags: ['learning']});
 
 使用svg标签将文字转换为图片, 而且文字还能居中和自动换行.
 
+![](../assets/text-image-demo.png)
+
 ### [如何使用js对象存储键值对](./how-to-save-key-value-using-js-object.html)
 
 使用js对象存储键值对. 准确的说是使用typescript的 Record 类型, 而不是 any 来存储对象, 以提供更好的代码提示以及类型检查.

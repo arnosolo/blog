@@ -39,13 +39,16 @@ Automatically format code on save in vscode / vite / vue3 / ts project.
 
 ![](./assets/eslint-fix-all-on-save.gif)
 
+### [How to convert text into image with svg tag.](./how-to-convert-text-to-image-with-svg-tag.html)
+
+Convert text into image with svg tag. The text is centered and able to wraps automatically.
+
+![](./assets/text-image-demo.png)
+
 ### [How to convert a string to a number between A and B](./how-to-convert-a-string-to-a-number-between-a-and-b.html)
 
 Use js to convert a string to a number between A and B. Moreover, entering the same string will output a fixed number.
 
-### [How to convert text into image with svg tag.](./how-to-convert-text-to-image-with-svg-tag.html)
-
-Convert text into image with svg tag. The text is centered and able to wraps automatically.
 
 ### [How to use js object to store key values pairs](./how-to-save-key-value-using-js-object.html)
 

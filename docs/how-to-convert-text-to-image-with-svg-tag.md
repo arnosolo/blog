@@ -8,7 +8,7 @@ description: Convert text into image with svg tag. The text is centered and able
 
 {{ $frontmatter.description }}
 
-![](./assets/how-to-convert-text-to-image-with-svg-tag.png)
+![](./assets/text-image-demo.png)
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 125">
