@@ -20,7 +20,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 ## Experience
 
-### Fullstack Developer
+### Frontend Developer
 
 *2022.06 ~ Present* WING SPREAD GROUP LIMITED
 
