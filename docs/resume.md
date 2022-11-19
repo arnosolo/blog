@@ -66,7 +66,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 - All use `eslint` to auto format code
 
-![Unblur Image](./assets/unblur-image.png)
+![Unblur Image](./assets/unblur-image-1.1.png)
 
 ## Individual works
 
