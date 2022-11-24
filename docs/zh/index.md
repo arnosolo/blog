@@ -22,6 +22,12 @@ footer: Copyright © 2022-present Arno Solo
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
 
+### [如何在网页中引入代码编辑器](./how-to-import-code-editor-in-web.html)
+
+读完本文, 您将掌握如何在您的网页中引入 vs code 同款代码编辑器 monaco editor
+
+![](../assets/monaco-editor-sql.png)
+
 ### [如何从零开始搭建一个PWA应用](./how-to-build-a-pwa-form-scratch.html)
 
 读完本文, 您将掌握如何搭建一个最简单的PWA(渐进式网页应用)

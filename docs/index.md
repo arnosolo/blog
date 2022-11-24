@@ -22,6 +22,12 @@ footer: Copyright © 2022-present Arno Solo
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
 
+### [How to import code editor in web](./how-to-import-code-editor-in-web.html)
+
+After reading this article, you will know how to introduce the same code editor as VS Code (Monaco Editor) in your web pages.
+
+![](./assets/monaco-editor-sql.png)
+
 ### [A better way to pass parameters to functions](./smart-functionparameters-in-javascript.html)
 
 If a function requires 4 arguments, then we need to pass in 4 arguments, even if the middle argument is not needed in some cases. So can you pass in a few parameters if you need a few parameters? Yes, you will know after reading this article.
