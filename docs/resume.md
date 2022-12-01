@@ -54,7 +54,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 - Support **Static site generation** with vite-ssg
 
-![aipassport.png](./assets/6a3d6e7b26c7043fb071cda6addcea61d73af826.png)
+![aipassport.png](./assets/ai-passport-photo.png)
 
 ### Unblur Image
 
