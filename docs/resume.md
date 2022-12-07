@@ -40,6 +40,28 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 ## Projects
 
+### Bio CMS
+
+[This website](https://p9gp3ricu5.us-east-1.awsapprunner.com/all-products) is a content manage system
+
+- Database `Firebase`
+
+- Frontend `nuxt` + `ts` + `unocss`.
+  
+  - Use `nuxt` to achieve `SSR` (Server Side Rendering) for better `SEO`.
+  
+  - Deploy at `aws app runner`
+
+- Admin `vue3` + `ts` + `unocss` + `PrimeVue`
+  
+  - Deploy at `aws s3`
+
+- Frontend demo
+![](./assets/bio-cms-frontend.png)
+
+- Admin demo
+![](./assets/bio-cms-admin.png)
+
 ### AiPassportPhoto
 
 [AiPassportPhoto](http://aipassportphoto.com/) is a website that can turn a normal photo into a passport photo. And I'm responsible for the frontend.
