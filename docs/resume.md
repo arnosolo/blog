@@ -96,8 +96,6 @@ GMT+8
 
 [github - arnosolo](https://github.com/arnosolo)
 
-![](./assets/github-home.png)
-
 ### Nationality
 
 Chinese resident
