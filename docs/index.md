@@ -22,6 +22,12 @@ footer: Copyright © 2022-present Arno Solo
 
 ​Hello, I am Arno. Today we are going to find out how 3d printer works by writing a firmware.
 
+### [How to import image viewer in vue project](./import-image-viewer-in-web.md)
+
+[viewerjs](https://github.com/fengyuanchen/viewerjs) is an excellent image viewing plugin, today we will wrap it as a vue component
+
+<img src="./assets/image-viewer-demo.jpg" alt="image-viewer-demo" width="300">
+
 ### [How to import code editor in web](./how-to-import-code-editor-in-web.html)
 
 After reading this article, you will know how to introduce the same code editor as VS Code (Monaco Editor) in your web pages.

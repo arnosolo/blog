@@ -22,6 +22,12 @@ footer: Copyright © 2022-present Arno Solo
 
 大家好, 我是阿诺. 今天将通过实现一个3D打印机固件来理解3D打印机是如何工作的.
 
+### [如何在vue项目中引入图片浏览插件](./import-image-viewer-in-web.md)
+
+[viewerjs](https://github.com/fengyuanchen/viewerjs)是一款优秀的图片浏览插件, 今天我们将会将它封装为一个vue组件
+
+<img src="../assets/image-viewer-demo.jpg" alt="image-viewer-demo" width="300">
+
 ### [如何在网页中引入代码编辑器](./how-to-import-code-editor-in-web.html)
 
 读完本文, 您将掌握如何在您的网页中引入 vs code 同款代码编辑器 monaco editor
