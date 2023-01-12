@@ -24,7 +24,7 @@ description: Hello, I'm Arno from China. I‘m a frontend developer. I know how 
 
 *2022.06 ~ Present* WING SPREAD GROUP LIMITED
 
-- Use Vite / Vue / TS / Unocss to build websites, more in [projects section](#Projects)
+- Use Vite / Vue / TS / Unocss / Ionic to build Web / Android / iOS application, more in [projects section](#Projects)
 
 ### Project Assistant
 
