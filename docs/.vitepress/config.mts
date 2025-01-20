@@ -41,7 +41,7 @@ export default defineConfig({
       lang: 'en',
       title: "Arno's blog",
     },
-    zh: {
+    'zh-CN': {
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh-CN/',

@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Arno's blog"
+  name: "阿诺的文章"
   # text: "#Web #iOS"
   # tagline: My great project tagline
   # actions:
@@ -15,27 +15,27 @@ hero:
   #     link: /api-examples
 
 features:
-  - title: Products
+  - title: 产品
     icon:
       src: /images/ri--app-store-line.svg
-    details: Products created by Arno
+    # details: Products created by Arno
     link: ./11-products
   - title: Web
     icon:
       src: /images/ri--compass-line.svg
-    details: Some articles about Web development
+    # details: Some articles about Web development
     link: ./1-web-dev-articles
   - title: iOS
     icon:
       light: /images/ri--apple-fill.svg
       dark: /images/ri--apple-fill-dark.svg
-    details: Some articles about iOS development
+    # details: Some articles about iOS development
     link: ./4-ios-dev-articles
-  - title: Embedded system
+  - title: 嵌入式系统
     icon:
       light: /images/ri--cpu-line.svg
       dark: /images/ri--cpu-line-dark.svg
-    details: Some articles about Embedded System
+    # details: Some articles about Embedded System
     link: ./3-embedded-system-articles
   # - title: Arno - Frontend Developer
   #   details: Resume
