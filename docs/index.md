@@ -24,21 +24,21 @@ features:
     icon:
       src: /images/ri--compass-line.svg
     details: Some articles about Web development
-    link: https://arnosolo.github.io/learn-web-development
+    link: ./1-web-dev-articles
   - title: iOS
     icon:
       light: /images/ri--apple-fill.svg
       dark: /images/ri--apple-fill-dark.svg
     details: Some articles about iOS development
-    link: https://arnosolo.github.io/learn-ios-development
+    link: ./4-ios-dev-articles
   - title: Embedded system
     icon:
       light: /images/ri--cpu-line.svg
       dark: /images/ri--cpu-line-dark.svg
     details: Some articles about Embedded System
-    link: https://arnosolo.github.io/learn-embedded-system
-  - title: Arno - Frontend Developer
-    details: Resume
-    link: ./resume
+    link: ./3-embedded-system-articles
+  # - title: Arno - Frontend Developer
+  #   details: Resume
+  #   link: ./resume
 ---
 

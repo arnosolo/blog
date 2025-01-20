@@ -41,11 +41,11 @@ export default defineConfig({
       lang: 'en',
       title: "Arno's blog",
     },
-    // zh: {
-    //   label: '简体中文',
-    //   lang: 'zh-CN',
-    //   link: '/zh/',
-    //   title: '阿诺的博客',
-    // }
+    zh: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      link: '/zh-CN/',
+      title: '阿诺的文章',
+    }
   },
 })
