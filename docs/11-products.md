@@ -16,6 +16,11 @@ hero:
   #     link: /api-examples
 
 features:
+  - title: Big Yellow Diary
+    icon:
+      src: /images/big-yellow-diary-app-icon.jpg
+    # details: Some articles about Web development
+    link: ./12-big-yellow-diary-introduction
   - title: Metadata Stamp
     icon:
       src: /images/metadata-app-icon.png
