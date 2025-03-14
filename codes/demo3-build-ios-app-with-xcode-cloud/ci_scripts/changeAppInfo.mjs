@@ -3,10 +3,22 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
+/**
+ * Alert! Must pass Xcode project name as first param of the script.
+ * ```sh
+ * # app is Xcode project name
+ * node changeAppInfo.mjs app
+ * ```
+ */
 async function main() {
   try {
-    // TODO: Replace config path. Note: Xcode will run ci_post_clone.sh at ci_scripts directory
-    const configPath = path.resolve('../app.xcodeproj/project.pbxproj')
+    const args = process.argv.slice(2);  // Skip the first two elements
+    const projectName = args.at(0)
+    if(projectName === undefined) {
+      throw new Error("[changeAppInfo] Must pass Xcode project name as first param of the script");
+    }
+
+    const configPath = path.resolve(`../${projectName}.xcodeproj/project.pbxproj`)
     await increaseVersion(configPath)
   }
   catch (error) {
@@ -32,7 +44,12 @@ async function increaseVersion(configPath) {
 
   const bundleVersion = versionMatch[0].replace('MARKETING_VERSION = ', '').replace(';', '')
 
-  const finalBundleVersion = `${bundleVersion}.${process.env.CI_BUILD_NUMBER}`
+  const ciBuildNumber = process.env.CI_BUILD_NUMBER
+  if(ciBuildNumber === undefined) {
+    throw new Error("[changeAppInfo] CI_BUILD_NUMBER is required, but it's undefined");
+  }
+
+  const finalBundleVersion = `${bundleVersion}.${ciBuildNumber}`
   print(`Overwrite version: ${bundleVersion} -> ${finalBundleVersion}`)
 
   const updatedConfigText = configText
