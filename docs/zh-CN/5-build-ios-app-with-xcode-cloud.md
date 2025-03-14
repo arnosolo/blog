@@ -106,8 +106,9 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 1. 创建 `workflow` 的按钮在 `Xcode` > `左侧导航栏` > `最右边那个标签` > `Cloud` > `Get Started`
    ![picture 1](../assets/591426f25c434af02884acbdcb8e316b7dcfd44459c6af456c5c5a92c34bd71e.png)
 2. 创建过程中需要为 `workflow` 增加一个 `Archive` 类型的 `Action`. 其中 `Distribution Preparation` 需要选为 `App Store Connect`, 因为这个构建最终可能会被发布到 `App Store`
-   ![picture 10](../assets/dabf68c784e23522969c69743eb5dbcbd0c72439417949136e1a18c5f9fc68a5.png)  
-3. 此时如果我们向 `Github仓库` 的 `main` 分支提交一个 `commit`, 应该就会触发 `Xcode Cloud` 的自动构建了. 你可以在 [App Store Connect > Xcode Cloud](https://appstoreconnect.apple.com/) 观察构建过程.
+   ![picture 10](../assets/dabf68c784e23522969c69743eb5dbcbd0c72439417949136e1a18c5f9fc68a5.png)
+3. 首次设置需要授权 Xcode Cloud 访问 Github 仓库 ![picture 0](../assets/38f19b971085f46c929e044916dfe2939781320a012a0d06087b8be478142aa6.png)
+4. 此时如果我们向 `Github仓库` 的 `main` 分支提交一个 `commit`, 应该就会触发 `Xcode Cloud` 的自动构建了. 你可以在 [App Store Connect > Xcode Cloud](https://appstoreconnect.apple.com/) 观察构建过程.
 
 ### 构建完成后自动发布到 TestFlight
 
