@@ -50,13 +50,11 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 在设置 `Xcode Cloud` 自动构建之前, 请务必先完成一次手动上传. 因为这能保证您在设置 `Xcode Cloud` 自动构建的时候遇到的问题全部都是 `Xcode Cloud` 造成的, 而不是由于源码或者 `TestFlight` 导致的.
 :::
 
-### 首次上传
-
-#### 设置应用图标
+### 设置应用图标
 - 这一操作是必须的, 因为没有应用图标将会导致手动上传到`TestFlight`失败
 - 此图片不得有`alpha通道`. 因为应用图标如有`alpha通道`, 将导致`Xcode Cloud`构建. 您可以通过将应用图标转换为`jpeg`格式来解决这个问题, 因为`jpeg`格式的图片没有`alpha通道`.
 
-#### 设置加密方式
+### 设置加密方式
 设置 `Info.plist` 中 `ITSAppUsesNonExemptEncryption` 键的值. 
 - 这个键的值反应了当前应用的加密方式, 如果您不知道那是什么, 可以将其设置为 `false`.
 - 这一操作是必须的, 因为如果没有在 `Info.plist` 中设置该键值, 每次发布 `TestFlight` 前, 您将需要在 `App Store Connect` 中手动设置应用的加密方式.
@@ -68,19 +66,19 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 </dict>
 ```
 
-#### 构建, 上传
+### 构建, 上传
 
 1. 设置 `Run Destination` 为 `Any iOS Device`
 2. 点击 `顶部菜单栏` > `Product` > `Archive` 以开始构建
 3. 在构建完成后一个名为 `Archives` 的窗口会自动弹出(该窗口亦可通过 `顶部菜单栏` > `Window` > `Organizer` 打开). 选择刚刚生成的 `Archive`, 然后点击 `Distribute App`. 如此, 应用便开始上传到`TestFlight`. ![picture 0](../assets/c93e74cec6f801687d91a2907f97ed58458ff80c932eea1f8e85c15a5f123a5a.png)
 
-#### 创建 TestFlight 测试组
+### 创建 TestFlight 测试组
 1. 当`Archive`上传完成后, 你就能在 [App Store Connect > TestFlight](https://appstoreconnect.apple.com/) 网页中找到你刚刚上传的项目了.
 2. 在`TestFlight`中创建一个`内部测试组`(INTERNAL TESTING). 
 3. 将测试者的`Apple ID`加到组里. 这一操作会使得 `TestFlight` 向你的 `Apple ID` 对应的邮箱发送一封邀请邮件.
    - 注意, 如果测试者不是当前开发者帐号的成员, 需要先要求他的`Apple ID`成为开发者帐号的成员.
 
-#### 接受 TestFlight 邀请
+### 接受 TestFlight 邀请
 
 1. 测试者首先需要保证自己的设备已安装 `TestFlight 应用`. 如尚未安装, 请到 [App Store](https://apps.apple.com/us/app/testflight/id899247664) 安装 ![picture 0](assets/565df8a386c7e7ee8fa84ec936e2535dd653e02c4cc3b5774233752d6772bf9b.jpeg)  
 2. 测试者检查其 `Apple ID` 对应的邮箱, 找到来自 `TestFlight` 的邀请邮件.
