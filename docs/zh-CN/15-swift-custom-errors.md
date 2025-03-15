@@ -1,4 +1,12 @@
-# Swift 自定义错误类型
+---
+title: Swift 自定义错误类型
+lang: zh-CN
+description: 本文描述了使用 Swift 编写应用时, 如何创建自定义错误类型
+---
+
+# {{ $frontmatter.title }}
+
+{{ $frontmatter.description }}
 
 ## 定义错误类型
 ```swift

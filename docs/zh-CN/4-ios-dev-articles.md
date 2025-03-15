@@ -8,14 +8,21 @@ description: 本文列举了开发 iOS 应用所需要了解的信息
 
 {{ $frontmatter.description }}
 
-## Swift
+## 核心
 
-[自定义错误类型](15-swift-custom-errors)
+### Swift
 
-## SwiftUI
+- [Swift 自定义错误类型](15-swift-custom-errors)
+- [Swift async await](19-swift-async-await)
 
-[SwiftUI 状态管理](17-SwiftUI-state-management)
+### SwiftUI
 
-## 构建
+- [SwiftUI 状态管理](17-SwiftUI-state-management)
 
-[构建一个 iOS 应用并上传到 TestFlight](5-build-ios-app-with-xcode-cloud)
+### 构建
+
+- [构建一个 iOS 应用并上传到 TestFlight](5-build-ios-app-with-xcode-cloud)
+
+## 按需学习
+
+- [从相册读取照片](18-swiftui-image-picker)
