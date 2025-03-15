@@ -13,6 +13,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/arnosolo/' }
     ],
+    outline: [2, 3],
     // sidebar: [
     //   {
     //     text: 'Examples',
