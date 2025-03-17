@@ -1,7 +1,7 @@
 ---
-title: Arno Solo
+title: Arno
 lang: en-US
-description: Arno can develop websites and iOS applications. This article lists the skills he has mastered and the websites and applications he has developed.
+description: Frontend Developer, iOS Developer. 3 years of work experience.
 ---
 
 # {{ $frontmatter.title }}
@@ -10,34 +10,42 @@ description: Arno can develop websites and iOS applications. This article lists 
 
 {{ $frontmatter.description }}
 
-## Skills
+## Experience
 
 - Web
   - HTML, CSS, TypeScript
   - React, Vue, Astro
   - Tailwind CSS
+  - Unit Testing (Vitest)
 - iOS
   - Swift, SwiftUI
+  - Unit Testing (XCTest)
+- Other
+  - Firebase
+
+## Experience
+
+- 2022~Present - Frontend Engineer - WING SPREAD GROUP LIMITED
 
 ## Projects
 
 ### AI Passport Photo
 
-AI Passport Photo is an online service that allows user convert a normal photo into a passport photo.
+The AI Passport Photo website converts users' regular photos into passport photos.
 - [Web](https://aipassportphoto.com/)
-
-### Portrait AI
-
-Portrait AI is an AI photo generator that can elevate your images from ordinary to extraordinary with a suite of creative tools and styles that redefine AI photo and AI portrait photography.
-- [App Store](https://apps.apple.com/us/app/portrait-ai-photo-generator/id6502435202)
-- [Google Play Store](https://play.google.com/store/apps/details?id=aiphoto.android.portraitai)
 
 ### Kids Art Gallery
 
-The Kids Art Gallery website allows users to generate an album containing multiple images using faces from the photos they provide.
+The Kids Art Gallery website generates an album with multiple images using the facial features from users' uploaded photos.
 - [Web](https://d2khihkksv8jjy.cloudfront.net/)
+
+### Portrait AI
+
+The Portrait AI app transfers users' facial features from uploaded photos onto template images.
+- [App Store](https://apps.apple.com/us/app/portrait-ai-photo-generator/id6502435202)
+- [Google Play Store](https://play.google.com/store/apps/details?id=aiphoto.android.portraitai)
 
 ### Baby Routine
 
-Baby Routine is an iOS app for tracking a baby's activities, such as feeding, sleeping, and height & weight measurements.
+Baby Routine is an iOS app for tracking baby activities, such as feeding, sleeping, and growth measurements.
 - [App Store](https://apps.apple.com/us/app/baby-routine-baby-tracker/id6740127932)
