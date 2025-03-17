@@ -1,9 +1,13 @@
 ---
 title: 大黄日记本
 lang: zh-CN
-description: 为什么要写日记? 我的答案是, 因为有些信息当时看起来不重要, 但是过段时间需要用到了却忘了. 比如说, 今天打算去一个朋友家, 我以前去过, 但是怎么也想不起来具体的地址了. 另一个例子是, 我周围有一个人说了一句话, 如何判断这句话是不是真话? 其中一种方法就是找出他之前的叙述进行对比, 看看是不是有相冲突的地方, 如果没有日记的话, 就没有办法进行对比了.
+description: 大黄日记本, 保留你的回忆.
 ---
 
 # {{ $frontmatter.title }}
 
 {{ $frontmatter.description }}
+
+![Screenshots of Big Yellow Diary App](../assets/1df09780605c16eb5d83cc45aabc8772b71a0115bd05c0f55788a7ebc1417d1a.jpeg)  
+
+[![Download on the App Store](../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/us/app/big-yellow-diary/id6739752316)
