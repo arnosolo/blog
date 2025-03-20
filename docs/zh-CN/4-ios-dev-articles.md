@@ -1,7 +1,7 @@
 ---
 title: iOS开发
 lang: zh-CN
-description: 本文列举了开发 iOS 应用所需要了解的信息
+description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的读者主要是几个月没有编写应用而忘记如何编写应用的自己. 特别是忘记某个具体功能该如何实现的自己.
 ---
 
 # {{ $frontmatter.title }}
@@ -22,6 +22,10 @@ description: 本文列举了开发 iOS 应用所需要了解的信息
 ### 图片
 
 - [从相册读取照片](18-swiftui-image-picker)
+
+### 数据持久化
+
+- [本地数据库 Core Data](22-ios-data-persistence-using-core-data)
 
 ### 构建
 
