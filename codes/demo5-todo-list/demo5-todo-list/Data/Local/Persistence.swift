@@ -8,10 +8,10 @@
 import CoreData
 
 struct PersistenceController {
-    static let shared = PersistenceController(dbName: "app", appGroupsId: nil)
+    static let shared = PersistenceController(dbName: "demo5_todo_list", appGroupsId: nil)
     
     static let preview: PersistenceController = {
-        let result = PersistenceController(dbName: "app", appGroupsId: nil, inMemory: true)
+        let result = PersistenceController(dbName: "demo5_todo_list", appGroupsId: nil, inMemory: true)
         return result
     }()
 

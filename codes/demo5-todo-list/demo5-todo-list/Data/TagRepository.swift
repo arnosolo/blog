@@ -32,7 +32,7 @@ class TagRepository {
         try await tagDAO.deleteOne(tagId: tag.tagId)
     }
     
-    func findTags(searchText: String?, tagId: String?, page: Int?, pageSize: Int?) async throws -> [TagModel] {
+    func findTags(searchText: String?, page: Int?, pageSize: Int?) async throws -> [TagModel] {
         return try await tagDAO.findMany(searchInput: searchText, page: page, pageSize: pageSize)
     }
 }

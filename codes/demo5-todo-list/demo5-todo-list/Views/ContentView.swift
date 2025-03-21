@@ -6,81 +6,121 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    @State private var todos: [TodoModel] = []
+    @State private var todoEditModalIsOpen = false
+    @State private var currentTodo: TodoModel? = nil
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+                ForEach(todos, id: \.todoId) { todo in
+                    TodoRow(todo: todo)
+                        .swipeActions {
+                            Button("Delete") {
+                                deleteTodo(todo: todo)
+                            }
+                            .tint(.red)
+                        }
+                        .swipeActions {
+                            Button("Edit") {
+                                currentTodo = todo
+                                todoEditModalIsOpen = true
+                            }
+                            .tint(.green)
+                        }
                 }
-                .onDelete(perform: deleteItems)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: addTodo) {
+                        Label("Add Todo", systemImage: "plus")
                     }
                 }
             }
-            Text("Select an item")
+            .sheet(isPresented: $todoEditModalIsOpen) {
+                TodoEditModal(
+                    isOpen: $todoEditModalIsOpen,
+                    formType: .update,
+                    todo: $currentTodo,
+                    onTodoCreated: { _ in },
+                    onTodoUpdated: handleTodoUpdated
+                )
+            }
+            .onAppear {
+                loadTodos()
+            }
+        }
+    }
+    
+    private func loadTodos() {
+        Task {
+            do {
+                let result = try await TodoRepository.shared.findTodos(searchText: nil, tagId: nil, page: nil, pageSize: nil)
+                
+                await MainActor.run {
+                    todos = result
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func handleTodoUpdated(todo: TodoModel) {
+        if let i = todos.firstIndex(where: { $0.todoId == todo.todoId }) {
+            todos[i] = todo
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
+    private func addTodo() {
+        Task {
+            let todo = TodoModel(
+                todoId: UUID().uuidString,
+                createdAt: Date(),
+                updatedAt: Date(),
+                title: Date().description,
+                completedAt: nil,
+                tags: []
+            )
+            
             do {
-                try viewContext.save()
+                try await TodoRepository.shared.createTodo(todo: todo)
+                
+                await MainActor.run {
+                    withAnimation {
+                        todos.append(todo)
+                    }
+                }
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                print(error.localizedDescription)
             }
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
+    private func deleteTodo(todo: TodoModel) {
+        Task {
             do {
-                try viewContext.save()
+                try await TodoRepository.shared.deleteTodo(todo: todo)
+                
+                await MainActor.run {
+                    withAnimation {
+                        if let i = todos.firstIndex(where: { $0.todoId == todo.todoId }) {
+                            todos.remove(at: i)
+                        }
+                    }
+                }
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                print(error.localizedDescription)
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
 }
