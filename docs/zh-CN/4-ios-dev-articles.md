@@ -19,6 +19,10 @@ description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的
 
 - [SwiftUI 状态管理](17-SwiftUI-state-management)
 
+### Unit Testing
+
+- [SwiftUI 应用单元测试](23-swiftui-unit-testing-with-xctest)
+
 ### 图片
 
 - [从相册读取照片](18-swiftui-image-picker)
