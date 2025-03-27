@@ -42,3 +42,7 @@ description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的
 - [从相册读取照片](18-swiftui-image-picker)
 - [使用相机捕获图片](20-swiftui-photo-capturer)
 - [保存图片到相册](21-swiftui-save-photo-to-photo-library)
+
+### 语音转文字
+
+- [SwiftUI 语音转文字](24-swiftui-speech-recognition)
