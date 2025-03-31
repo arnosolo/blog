@@ -1,7 +1,7 @@
 ---
 title: Arno
 lang: en-US
-description: Frontend Developer, iOS Developer. 3 years of work experience.
+description: Frontend Developer, iOS Developer. 3 years of work experience. My rate 20 SGD/h
 ---
 
 # {{ $frontmatter.title }}
@@ -25,7 +25,7 @@ description: Frontend Developer, iOS Developer. 3 years of work experience.
 
 ## Experience
 
-- 2022~Present - Frontend Engineer - WING SPREAD GROUP LIMITED
+- 2022~Present - Frontend development contractor
 
 ## Projects
 

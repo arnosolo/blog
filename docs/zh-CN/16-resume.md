@@ -1,7 +1,7 @@
 ---
 title: 阿诺
 lang: zh-CN
-description: 前端开发者, iOS开发者. 工作经验 3 年.
+description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 20 SGD/h
 ---
 
 # {{ $frontmatter.title }}
@@ -25,7 +25,7 @@ description: 前端开发者, iOS开发者. 工作经验 3 年.
 
 ## 经验
 
-- 2022~至今 - 前端工程师 - WING SPREAD GROUP LIMITED
+- 2022~至今 - 前端开发承包商
 
 ## 项目
 
