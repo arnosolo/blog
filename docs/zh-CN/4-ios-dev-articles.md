@@ -46,3 +46,7 @@ description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的
 ### 语音转文字
 
 - [SwiftUI 语音转文字](24-swiftui-speech-recognition)
+
+### 内购
+
+- [测试 iOS 应用的订阅功能](25-test-subscription-feature-of-an-ios-app)
