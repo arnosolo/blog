@@ -12,6 +12,7 @@ description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 20 
 
 ## 技能
 
+- Understand English
 - Web
   - HTML, CSS, TypeScript
   - React, Vue, Astro
