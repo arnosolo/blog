@@ -17,10 +17,10 @@ description: 本文描述了在 SwiftUI 应用中如何使用相机捕获一张�
 
 ### 声明权限
 
-在 `Info.plist` 文件中增加 `NSCameraUsageDescription` 键.
+在 `Info.plist` 文件中增加 `NSCameraUsageDescription` 键. 注意, 必须提供一个具体的使用例子, 不然可能会被 App Store 审核人员拒绝. Guideline 5.1.1 - Legal - Privacy - Data Collection and Storage
 ```xml
 <key>NSCameraUsageDescription</key>
-<string>Please allow camera access to take a photo</string>
+<string>The app needs camera permission to capture a photo. For instance, it could be used to generate an image in the style of Ghibli.</string>
 ```
 
 ### 定义 PhotoCapturer
