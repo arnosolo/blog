@@ -95,9 +95,23 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 
 在设置完 `Xcode Cloud workflow` 后, 每次 `Github仓库` 的 `main` 分支变化时, `Xcode Cloud` 就会自动开始构建 `Archive`, 完成后自动将其上传到 `TestFlight`.
 
+### 自动加大版本号
+
+根据苹果的文档 [Writing custom build scripts | Apple](https://developer.apple.com/documentation/xcode/writing-custom-build-scripts), `Xcode Cloud` 在构建 `Archive` 之前, 会运行项目文件夹下的 `ci_scripts/ci_post_clone.sh` 文件. 所以我们可以在该文件中运行一个`js`脚本来加大版本号.
+
+::: code-group
+<<< ../../codes/demo3-build-ios-app-with-xcode-cloud/ci_scripts/ci_post_clone.sh
+<<< ../../codes/demo3-build-ios-app-with-xcode-cloud/ci_scripts/changeAppInfo.mjs{js}
+:::
+
+### 应用图标没有透明像素
+
+使用`Xcode Cloud`构建时, 应用图标不得有`alpha通道`, 其实就是不能有透明的像素. 你可以通过将应用图标转换为`jpeg`格式来解决这个问题, 因为`jpeg`格式的图片没有`alpha通道`.
+
 ### 创建 Github 仓库
 
-创建一个`main`分支, 然后将这个分支上传`Github仓库`.
+1. 创建一个`main`分支, 然后将这个分支上传`Github仓库`.
+2. (可选)创建一个`build_ios`分支专门用于触发构建.
 
 ### 创建 Xcode Cloud workflow
 
@@ -114,19 +128,6 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 
 打开要编辑的 `workflow`, 然后增加一个 `Post-Action`, 类型为 `TestFlight Internal Testing`. 选择你之前创建的测试组, 然后每次 `Xcode Cloud` 构建完成后就会自动发布到 `TestFlight` 了.
 ![picture 9](../assets/96d33808314288722e8ac494228bbecb799e30e13a4a4eb2631447d915bb8acd.png)  
-
-### 自动加大版本号
-
-根据苹果的文档 [Writing custom build scripts | Apple](https://developer.apple.com/documentation/xcode/writing-custom-build-scripts), `Xcode Cloud` 在构建 `Archive` 之前, 会运行项目文件夹下的 `ci_scripts/ci_post_clone.sh` 文件. 所以我们可以在该文件中运行一个`js`脚本来加大版本号.
-
-::: code-group
-<<< ../../codes/demo3-build-ios-app-with-xcode-cloud/ci_scripts/ci_post_clone.sh
-<<< ../../codes/demo3-build-ios-app-with-xcode-cloud/ci_scripts/changeAppInfo.mjs{js}
-:::
-
-### 应用图标
-
-使用`Xcode Cloud`构建时, 应用图标不得有`alpha通道`, 其实就是不能有透明的像素. 你可以通过将应用图标转换为`jpeg`格式来解决这个问题, 因为`jpeg`格式的图片没有`alpha通道`.
 
 ## 参考材料
 
