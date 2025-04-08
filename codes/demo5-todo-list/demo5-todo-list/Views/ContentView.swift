@@ -85,7 +85,8 @@ struct ContentView: View {
                 updatedAt: Date(),
                 title: Date().description,
                 completedAt: nil,
-                tags: []
+                tags: [],
+                location: nil
             )
             
             do {

@@ -36,6 +36,12 @@ class TodoDAO {
                 }
             }
             
+            if let id = todo.location?.id {
+                entity.location = LocationDAO.findEntity(id: id, ctx: ctx)
+            } else {
+                entity.location = nil
+            }
+            
             try ctx.save()
         }
     }
@@ -123,13 +129,19 @@ class TodoDAO {
             TagDAO.entityToModel(entity: entity, ctx: ctx)
         }
         
+        var location: LocationModel? = nil
+        if let locationEntity = entity.location {
+            location = LocationDAO.entityToModel(entity: locationEntity, ctx: ctx)
+        }
+        
         return TodoModel(
             todoId: todoId,
             createdAt: createdAt,
             updatedAt: updatedAt,
             title: title,
             completedAt: entity.completedAt,
-            tags: tags
+            tags: tags,
+            location: location
         )
     }
 }

@@ -7,4 +7,5 @@ struct TodoModel {
     let title: String
     let completedAt: Date?
     let tags: [TagModel]
+    let location: LocationModel?
 }

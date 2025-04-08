@@ -35,15 +35,16 @@ description: 本文通过描述编写一个待办清单应用的过程, 阐述�
 <<< ../../codes/demo5-todo-list/demo5-todo-list/Data/Local/TagDAO.swift
 :::
 
-### 定义多对多关系
+### 多对多关系
 
+#### 修改 .xcdatamodeld 文件
 一个常见的功能是, 一个待办引用了多个标签, 一个标签可以被指派给多个待办. 待办与标签之间的关系是多对多, 如果是使用 SQL 语句操作数据库, 这样的关系需要创建一张关联表来描述两者之间的关系. 但是使用 Core Data 操作数据库时, 我们需要使用图形界面来完成类似操作.
 1. 在 TodoEntity > Relationships 界面中增加 `tags` 字段, Destination 选择 `TagEntity`. 打开右侧栏 > Relationship, 选择 Type 为 `To Many`
 2. 在 TagEntity > Relationships 界面中增加 `todos` 字段, Destination 选择 `TodoEntity`. 打开右侧栏 > Relationship, 选择 Type 为 `To Many`
 3. 选择 TagEntity > Relationships > Inverse 为 `todos`
 ![picture 0](assets/d52df4c377eb531a9274c58f7870ca41ae2b52106b42bf04f7d558a647f84b45.png)
 
-### 在 todo 中包含 tags
+#### 在 todo 中包含 tags
 
 1. 首先在 `TodoModel` 增加 `tags` 字段.
 2. `TodoDAO.updateOne` 方法中加入为 `TodoEntity` 连接上 `TagEntity` 的方法
@@ -54,9 +55,65 @@ description: 本文通过描述编写一个待办清单应用的过程, 阐述�
 <<< ../../codes/demo5-todo-list/demo5-todo-list/Data/Local/TodoDAO.swift
 :::
 
-### 寻找与 tag 关联的 todos
+#### 寻找与 tag 关联的 todos
 
 我之前遇到了一个奇怪的问题是, 如果像在 todo 中包含 tags 那样把 `todos` 作为 `TagEntity` 的一个字段, 那么在应用内创建关联完全没有问题, 但是如果进行数据的导入和导出的时候, 应用常常会出现崩溃, 我不明白为什么. 所以, 我采用的方案是如果需要知道与 tag 关联的 todos, 那么并不在 `TagDAO` 中获取 todos, 而是在 `TodoDAO.findMany` 的方法中增加一个 `tagId` 的参数来过滤 todos.
+
+### 一对多关系
+
+#### 定义 LocationModel
+
+::: code-group
+<<< ../../codes/demo5-todo-list/demo5-todo-list/Models/LocationModel.swift
+:::
+
+#### 修改 .xcdatamodeld 文件
+1. 在 TodoEntity > Relationships 界面中增加 `location` 字段, Destination 选择 `LocationEntity`
+2. 在 LocationEntity > Relationships 界面中增加 `todos` 字段, Destination 选择 `TodoEntity`. 打开右侧栏 > Relationship, 选择 Type 为 `To Many`
+
+#### 在 todo 中包含 location
+
+写入数据库
+```swift
+class TodoDAO {
+    ...
+    func updateOne(todo: TodoModel) async throws {
+        ...
+        Self.modifyEntity(entity: entity, todo: todo)
+        ...
+        if let id = todo.location?.id {
+            entity.location = LocationDAO.findEntity(id: id, ctx: ctx)
+        } else {
+            entity.location = nil
+        }
+        
+        try ctx.save()
+    }
+}
+```
+
+从数据库读取
+```swift
+class TodoDAO {
+    static func entityToModel(entity: TodoEntity, ctx: NSManagedObjectContext) -> TodoModel? {
+        ...
+        var location: LocationModel? = nil
+        if let locationEntity = entity.location {
+            location = LocationDAO.entityToModel(entity: locationEntity, ctx: ctx)
+        }
+
+        return TodoModel(
+            todoId: todoId,
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            title: title,
+            completedAt: entity.completedAt,
+            tags: tags,
+            location: location
+        )
+    }
+}
+```
 
 ## 分离数据层与视图层
 

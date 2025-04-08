@@ -64,7 +64,8 @@ struct TodoEditModal: View {
                         updatedAt: Date(),
                         title: titleInput,
                         completedAt: nil,
-                        tags: selectedTags
+                        tags: selectedTags,
+                        location: nil
                     )
                     try await TodoRepository.shared.createTodo(todo: todo)
                     
@@ -87,7 +88,8 @@ struct TodoEditModal: View {
                         updatedAt: todo.updatedAt,
                         title: titleInput,
                         completedAt: nil,
-                        tags: selectedTags
+                        tags: selectedTags,
+                        location: nil
                     )
                     try await TodoRepository.shared.updateTodo(todo: newTodo)
                     
