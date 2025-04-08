@@ -1,7 +1,7 @@
 ---
 title: Arno
 lang: en-US
-description: Frontend Developer, iOS Developer. 3 years of work experience. My rate 20 SGD/h
+description: Frontend Developer, iOS Developer. 3 years of work experience. Expected hourly rate 18 SGD/h, receive payment biweekly.
 ---
 
 # {{ $frontmatter.title }}
@@ -10,42 +10,70 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. My r
 
 {{ $frontmatter.description }}
 
+## Skills
+
+**Languages**  
+1. Understand English  
+2. Native Mandarin speaker  
+
+**Web**  
+1. HTML, CSS, TypeScript  
+2. React  
+3. Vue  
+4. Astro  
+5. Uno CSS (Tailwind CSS alternative)  
+6. Vitest (Unit Testing)  
+7. ESLint  
+8. Stripe  
+
+**iOS**  
+1. Swift  
+2. SwiftUI  
+3. XCTest (Unit Testing)  
+4. Local notifications  
+5. Live Activity  
+6. Firebase (Auth, Storage, Firestore, Cloud Functions)  
+7. StoreKit (Consumable, Non-consumable)  
+8. RevenueCat (Subscription)  
+
 ## Experience
 
-- Web
-  - HTML, CSS, TypeScript
-  - React, Vue, Astro
-  - Tailwind CSS
-  - Unit Testing (Vitest)
-- iOS
-  - Swift, SwiftUI
-  - Unit Testing (XCTest)
-- Other
-  - Firebase
-
-## Experience
-
-- 2022~Present - Frontend development contractor
+- 2022–Present - Frontend Developer Contractor  
 
 ## Projects
 
 ### AI Passport Photo
 
-The AI Passport Photo website converts users' regular photos into passport photos.
+AI Passport Photo website can convert a regular photo into a passport photo.
+
+Related skills: `Astro`, `Vue`, `Uno CSS`, `Vitest`, `ESLint`, `Stripe`
+
+Deployment page:  
 - [Web](https://aipassportphoto.com/)
-
-### Kids Art Gallery
-
-The Kids Art Gallery website generates an album with multiple images using the facial features from users' uploaded photos.
-- [Web](https://d2khihkksv8jjy.cloudfront.net/)
-
-### Portrait AI
-
-The Portrait AI app transfers users' facial features from uploaded photos onto template images.
-- [App Store](https://apps.apple.com/us/app/portrait-ai-photo-generator/id6502435202)
-- [Google Play Store](https://play.google.com/store/apps/details?id=aiphoto.android.portraitai)
 
 ### Baby Routine
 
-Baby Routine is an iOS app for tracking baby activities, such as feeding, sleeping, and growth measurements.
+Baby Routine is an iOS app for tracking baby activities, such as feeding, sleeping, height, and weight.
+
+Related skills: `SwiftUI`, `XCTest`, `Local notifications`, `Live Activity`, `Firebase`
+
+Deployment page:  
 - [App Store](https://apps.apple.com/us/app/baby-routine-baby-tracker/id6740127932)
+
+### UK Passport Photo Pro
+
+The UK Passport Photo Pro app can convert a regular photo into a passport photo that meets UK government requirements.
+
+Related skills: `SwiftUI`, `XCTest`, `StoreKit`
+
+Deployment page:  
+- [App Store](https://apps.apple.com/us/app/uk-passport-photo-pro/id6743296026)
+
+### Email AI Assistant
+
+The Email AI Assistant app uses artificial intelligence to turn your simple ideas into a proper email.
+
+Related skills: `SwiftUI`, `XCTest`, `RevenueCat`
+
+Deployment page:  
+- [App Store](https://apps.apple.com/us/app/email-ai-assistant/id6743690196)  
