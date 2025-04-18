@@ -11,7 +11,7 @@ appName: My Tomatoes - Pomodoro Timer
 
 Welcome to {{ $frontmatter.appName }} App about page!
 
-{{ $frontmatter.appName }}, Work Smarter, Focus Longer.
+This App is composed by {{ $frontmatter.author }}.
 
 Some sound effect files are from [Notification Sounds website](https://notificationsounds.com).
 
