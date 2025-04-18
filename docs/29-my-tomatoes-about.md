@@ -13,6 +13,4 @@ Welcome to {{ $frontmatter.appName }} App about page!
 
 This App is composed by {{ $frontmatter.author }}.
 
-Some sound effect files are from [Notification Sounds website](https://notificationsounds.com).
-
 Email {{ $frontmatter.email }}
