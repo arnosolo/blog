@@ -42,7 +42,7 @@ description: 本文通过描述编写一个待办清单应用的过程, 阐述�
 1. 在 TodoEntity > Relationships 界面中增加 `tags` 字段, Destination 选择 `TagEntity`. 打开右侧栏 > Relationship, 选择 Type 为 `To Many`
 2. 在 TagEntity > Relationships 界面中增加 `todos` 字段, Destination 选择 `TodoEntity`. 打开右侧栏 > Relationship, 选择 Type 为 `To Many`
 3. 选择 TagEntity > Relationships > Inverse 为 `todos`
-![picture 0](assets/d52df4c377eb531a9274c58f7870ca41ae2b52106b42bf04f7d558a647f84b45.png)
+![picture 0](../assets/d52df4c377eb531a9274c58f7870ca41ae2b52106b42bf04f7d558a647f84b45.png)
 
 #### 在 todo 中包含 tags
 

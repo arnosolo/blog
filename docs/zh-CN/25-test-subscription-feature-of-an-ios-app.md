@@ -28,7 +28,7 @@ description: 本文描述了如何测试 iOS 应用的订阅功能. 包括创建
 ## 登录沙盒用户
 
 请在您的 iPhone > Settings > App Store > Sandbox Account 页面中登录您刚刚创建的沙盒账户. 您可以在这个页面中管理当前沙盒账户的订阅.
-![picture 0](assets/bbe6be609613539ac0774ffe92471f327d14281fef284b932d5fac9621c968ce.png)  
+![picture 0](../assets/bbe6be609613539ac0774ffe92471f327d14281fef284b932d5fac9621c968ce.png)  
 
 ## 测试订阅
 
