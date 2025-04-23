@@ -31,12 +31,12 @@ features:
       dark: /images/ri--apple-fill-dark.svg
     details: Some articles about iOS development
     link: ./4-ios-dev-articles
-  # - title: Embedded system
-  #   icon:
-  #     light: /images/ri--cpu-line.svg
-  #     dark: /images/ri--cpu-line-dark.svg
-  #   details: Some articles about Embedded System
-  #   link: ./3-embedded-system-articles
+  - title: Embedded system
+    icon:
+      light: /images/ri--cpu-line.svg
+      dark: /images/ri--cpu-line-dark.svg
+    details: Some articles about Embedded System
+    link: ./3-embedded-system-articles
   - title: Arno - Frontend Developer
     icon:
       src: /images/ri--file-user-line.svg

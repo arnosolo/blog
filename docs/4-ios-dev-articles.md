@@ -1,6 +1,6 @@
 ---
 title: iOS Development
-lang: zh-CN
+lang: en-US
 description: This article lists the information needed to develop iOS apps. The intended reader is mainly myself after not writing apps for a few months and forgetting how to do it—especially forgetting how to implement specific features.
 ---
 
