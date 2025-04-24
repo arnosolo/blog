@@ -41,4 +41,8 @@ features:
       src: /images/exif-editor-app-icon.png
     # details: iOS
     link: ./exif-editor-introduction
+  - title: 我的番茄 - 番茄工作法
+    icon:
+      src: /images/my-tomatoes-app-icon.jpg
+    link: ./30-my-tomatoes-introduction
 ---

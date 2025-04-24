@@ -41,4 +41,8 @@ features:
       src: /images/exif-editor-app-icon.png
     # details: iOS
     link: ./exif-editor-introduction
+  - title: My Tomatoes - Pomodoro Timer
+    icon:
+      src: /images/my-tomatoes-app-icon.jpg
+    link: ./30-my-tomatoes-introduction
 ---

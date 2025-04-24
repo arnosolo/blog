@@ -20,4 +20,8 @@ features:
     icon:
       src: /images/metadata-app-icon.png
     link: ./metadata-watermark-introduction
+  - title: 我的番茄 - 番茄工作法
+    icon:
+      src: /images/my-tomatoes-app-icon.jpg
+    link: ./30-my-tomatoes-introduction
 ---
