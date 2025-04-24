@@ -11,7 +11,8 @@ export default defineConfig({
       { text: 'Home', link: '/' },
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/arnosolo/' }
+      { icon: 'github', link: 'https://github.com/arnosolo/' },
+      { icon: 'x', link: 'https://x.com/arno_solo_756' }
     ],
     outline: [2, 3],
     // sidebar: [
@@ -47,6 +48,12 @@ export default defineConfig({
       lang: 'zh-CN',
       link: '/zh-CN/',
       title: '阿诺的文章',
+    },
+    'zh-TW': {
+      label: '繁體中文',
+      lang: 'zh-TW',
+      link: '/zh-TW/',
+      title: '阿諾的文章',
     }
   },
 })
