@@ -49,11 +49,11 @@ export default defineConfig({
       link: '/zh-CN/',
       title: '阿诺的文章',
     },
-    'zh-TW': {
-      label: '繁體中文',
-      lang: 'zh-TW',
-      link: '/zh-TW/',
-      title: '阿諾的文章',
-    }
+    // 'zh-TW': {
+    //   label: '繁體中文',
+    //   lang: 'zh-TW',
+    //   link: '/zh-TW/',
+    //   title: '阿諾的文章',
+    // }
   },
 })
