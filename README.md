@@ -6,12 +6,12 @@ https://github.com/arnosolo/blog
 
 1. Install deps
   ```bash
-  pnpm i
+  npm i
   ```
 
 2. Start dev server
   ```bash
-  pnpm docs:dev
+  npm run docs:dev
   ```
 
 #### Deploy

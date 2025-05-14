@@ -14,20 +14,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-      
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+          node-version: 22
 
       - name: Install dependencies
-        run: pnpm i
+        run: npm i
 
       - name: Build dist files
-        run: pnpm docs:build
+        run: npm run docs:build
 
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
