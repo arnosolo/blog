@@ -54,3 +54,7 @@ description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的
 ### 内购
 
 - [测试 iOS 应用的订阅功能](25-test-subscription-feature-of-an-ios-app)
+
+### 通知
+
+- [实现 iOS 本地通知功能](31-ios-local-notification)
