@@ -58,3 +58,4 @@ description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的
 ### 通知
 
 - [实现 iOS 本地通知功能](31-ios-local-notification)
+- [自定义 iOS 通知提示音](32-ios-custom-notification-sound)
