@@ -1,7 +1,7 @@
 ---
-title: 实现 iOS 本地通知功能
-lang: zh-CN
-description: 本文介绍了如何实现 iOS 的本地通知功能. 包括本地通知有哪些类型, 实现的流程, 以及实现的代码
+title: Implement iOS local notification
+lang: en-US
+description: This article introduces how to implement local notification in iOS. It includes the types of local notifications and the code for implementation.
 author: HUANG SHAN
 ---
 
@@ -9,10 +9,12 @@ author: HUANG SHAN
 
 {{ $frontmatter.description }}
 
-### 添加权限使用说明
+### Add Usage Description for Permissions
 
-在 `Info.plist` 文件中, 增加键`NSUserNotificationsUsageDescription`.
-- 注意, 描述中需要有实际的例子, 否则在应用提交 App Store 审核时, 可能会被审核人员拒绝
+Add the key `NSUserNotificationsUsageDescription` to your `Info.plist` file.
+
+* Note: The description must include a real example; otherwise, your app may be rejected during App Store review.
+
 ```xml
 <dict>
     <key>NSUserNotificationsUsageDescription</key>
@@ -20,19 +22,25 @@ author: HUANG SHAN
 </dict>
 ```
 
-### 通知类型
+### Types of Notifications
 
-本地通知一共有两种类型.
-1. 一种根据时间间隔触发. 比如说现在注册一个通知, 设置时间间隔为 60s, 那么 60s 后手机就会显示一条通知. 如果进一步设置该通知为重复通知, 则每隔 60s 显示一条通知
-2. 另一种根据日历触发. 比如说现在注册一个通知, 设置其触发日期为 05/30, 那么到了 05/30, 手机就会显示一条通知. 如果进一步设置该通知为重复通知, 那么每年 05/30 都会显示一条通知.
+There are two types of local notifications:
 
-### 实现流程
+1. **Triggered by time interval**
+   For example, if a notification is registered with a 60-second interval, the phone will display a notification after 60 seconds.
+   If this notification is set to repeat, it will display every 60 seconds.
 
-1. 检查通知权限状态
-2. 请求用户授予通知权限
-3. 注册本地通知
+2. **Triggered by calendar date**
+   For example, if a notification is registered with a trigger date of 05/30, the phone will display the notification on 05/30.
+   If the notification is set to repeat, it will display on 05/30 every year.
 
-### 定义通知管理类
+### Implementation Workflow
+
+1. Check the notification permission status
+2. Request the user to grant notification permission
+3. Register the local notification
+
+### Define the Notification Manager Class
 
 ```swift
 // NotificationManager.swift
@@ -165,10 +173,10 @@ class NotificationManager {
 }
 ```
 
-### 使用通知管理类
+### Using the Notification Manager
 
 ```swift
-// 15s 后显示一条通知. 注意您将需要离开应用才能看到通知.
+// Show a notification after 15 seconds. Note: you need to leave the app to see the notification.
 _ = try await NotificationManager.instance.notifyAfter(
     seconds: 15,
     repeats: false,

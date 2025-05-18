@@ -1,7 +1,7 @@
 ---
-title: 自定义 iOS 通知提示音
-lang: zh-CN
-description: 本文介绍了如何实现 自定义 iOS 通知提示音.
+title: Custom iOS notification sound
+lang: en-US
+description: This article explains how to implement custom iOS notification sounds.
 author: HUANG SHAN
 ---
 
@@ -9,9 +9,9 @@ author: HUANG SHAN
 
 {{ $frontmatter.description }}
 
-1. 添加音频文件到 Xcode 项目
-   ![picture 0](../assets/f94672555b0fa3fe54ca92c61cb1d6970dc8ac7f70843fd03233f4e8fa8c3995.png)
-2. 设置通知提示音
+1. Add audio files to the Xcode project
+   ![picture 0](assets/f94672555b0fa3fe54ca92c61cb1d6970dc8ac7f70843fd03233f4e8fa8c3995.png)
+2. Set notification sound
    ```swift
     let content = UNMutableNotificationContent()
     content.title = title

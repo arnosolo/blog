@@ -54,3 +54,8 @@ description: This article lists the information needed to develop iOS apps. The 
 ### In-App Purchases
 
 - [Test Subscription Feature in an iOS App](25-test-subscription-feature-of-an-ios-app)
+
+### Notifications
+
+- [Implement iOS local notification](31-ios-local-notification)
+- [Custom iOS notification sound](32-ios-custom-notification-sound)
