@@ -116,6 +116,47 @@ class TodoDAO {
 }
 ```
 
+### Fixing App Crashes
+
+I found that if an `Entity` is associated with multiple other `Entities`, the app might crash without any error message appearing in the console.
+
+For example, in one of my projects, I defined the following relationships: a `ProductEntity` can have multiple `ItemEntity`s, and each `ItemEntity` can be linked to a `ProductEntity`.
+
+```yml
+ProductEntity
+- items
+
+ItemEntity
+- product
+```
+
+Everything worked fine up to this point. However, when I tried to add another relationship—linking `ProductEntity` to `BrandEntity` through a `brand` relation—Xcode still built successfully, but the app crashed when running in the simulator.
+
+To handle this situation, my solution was:
+
+1. Instead of adding a `brand` relationship to `ProductEntity`, I added a field `brandId`.
+2. When reading data in `ProductDAO`, I look up the corresponding `BrandEntity` using the `brandId` from the `ProductEntity` instance:
+
+   ```swift
+   static func entityToModel(entity: ProductEntity, ctx: NSManagedObjectContext) -> ProductModel? {
+       ...
+       // brand
+       var brand: BrandModel? = nil
+       if let brandId = entity.brandId, let e = BrandDAO.findEntity(id: brandId, ctx: ctx) {
+           brand = BrandDAO.entityToModel(entity: e, ctx: ctx)
+       }
+       ...
+   }
+   ```
+3. When writing data in `ProductDAO`, I store the `id` of the `BrandModel` instance directly as `brandId`:
+
+   ```swift
+   static func modifyEntity(entity: ProductEntity, product: ProductModel) {
+       ...
+       entity.brandId = product.brand?.id
+   }
+   ```
+
 ## Separating the Data Layer from the View Layer
 
 My personal preference is:

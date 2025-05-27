@@ -115,6 +115,43 @@ class TodoDAO {
 }
 ```
 
+### 解决应用崩溃
+
+我发现如果一个`Entity`关联了多种`Entities`时, 应用可能会崩溃, 且控制台没有输出任何错误报告.
+
+比如说, 我在一个项目中定义了如下的关系. 一个 `ProductEntity` 可能有多个 `ItemEntity`, 一个个 `ItemEntity` 可能连接一个 `ProductEntity`.
+```yml
+ProductEntity
+- items
+
+ItemEntity
+- product
+```
+
+目前为止一切, 但是当我尝试给 `ProductEntity` 再增加一个 `brand` 关系来连接 `BrandEntity` 后, Xcode构建可以成功, 但是在模拟器运行应用时, 应用崩溃.
+
+对于这种情况, 我的解决方案是, 
+1. 在 `ProductEntity` 中增加一个字段 `brandId` 而不是增加一个关系 `brand`.
+2. 在 `ProductDAO` 读取时, 根据 `ProductEntity` 实例的 `brandId` 来查找 `BrandEntity`.
+   ```swift
+    static func entityToModel(entity: ProductEntity, ctx: NSManagedObjectContext) -> ProductModel? {
+        ...
+        // brand
+        var brand: BrandModel? = nil
+        if let brandId = entity.brandId, let e = BrandDAO.findEntity(id: brandId, ctx: ctx) {
+            brand = BrandDAO.entityToModel(entity: e, ctx: ctx)
+        }
+        ...
+    }
+   ```
+3. 在 `ProductDAO` 写入时, 直接存储 `BrandModel` 实例的 `id` 为 `brandId`
+   ```swift
+    static func modifyEntity(entity: ProductEntity, product: ProductModel) {
+        ...
+        entity.brandId = product.brand?.id
+    }
+   ```
+
 ## 分离数据层与视图层
 
 我个人的偏好是,
