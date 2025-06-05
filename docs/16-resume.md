@@ -49,7 +49,7 @@ Related skills: `Astro`, `Vue`, `Uno CSS`, `Vitest`, `ESLint`, `Stripe`
 
 ### foto3x4.com
 
-[foto3x4.com](https://aipassportphoto.com/) is another website that can convert a regular photo into a passport photo, but uses a different tech stack.
+[foto3x4.com](https://foto3x4.com) is another website that can convert a regular photo into a passport photo, but uses a different tech stack.
 
 Related skills: `React`, `Tailwind CSS`
 

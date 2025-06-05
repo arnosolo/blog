@@ -49,7 +49,7 @@ iOS
 
 ### foto3x4.com
 
-[foto3x4.com](https://aipassportphoto.com/)也是一个将用户的普通照片转化为证件照, 但是使用了不同的技术栈.
+[foto3x4.com](https://foto3x4.com)也是一个将用户的普通照片转化为证件照, 但是使用了不同的技术栈.
 
 关联技能: `React`, `Tailwind CSS`
 
