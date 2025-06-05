@@ -1,7 +1,7 @@
 ---
 title: 阿诺
 lang: zh-CN
-description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 60 CNY/h, 每2周结款一次.
+description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 60 CNY/小时.
 ---
 
 # {{ $frontmatter.title }}
@@ -13,8 +13,8 @@ description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 60 
 ## 技能
 
 语言
-1. Understand English
-2. Native Mandarin speaker
+1. 英语
+2. 普通话
 
 Web
 1. HTML, CSS, TypeScript
