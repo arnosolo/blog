@@ -45,4 +45,8 @@ features:
     icon:
       src: /images/my-tomatoes-app-icon.jpg
     link: ./30-my-tomatoes-introduction
+  - title: Rate My Items
+    icon:
+      src: /images/rate-my-items-app-icon.jpg
+    link: ./35-rate-my-items-introduction
 ---
