@@ -12,44 +12,46 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 
 ## Skills
 
-**Languages**  
-1. Understand English  
-2. Native Mandarin speaker  
+**Languages**
+1. Understand English
+2. Native Mandarin speaker
 
-**Web**  
-1. HTML, CSS, TypeScript  
-2. React  
-3. Vue  
-4. Astro  
-5. Uno CSS (Tailwind CSS alternative)  
-6. Vitest (Unit Testing)  
-7. ESLint  
-8. Stripe  
+**Web**
+1. HTML, CSS, TypeScript
+2. React
+3. Vue
+4. Astro
+5. Uno CSS (Tailwind CSS alternative)
+6. Vitest (Unit Testing)
+7. ESLint
+8. Stripe
 
-**iOS**  
-1. Swift  
-2. SwiftUI  
-3. XCTest (Unit Testing)  
-4. Local notifications  
-5. Live Activity  
-6. Firebase (Auth, Storage, Firestore, Cloud Functions)  
-7. StoreKit (Consumable, Non-consumable)  
-8. RevenueCat (Subscription)  
+**iOS**
+1. Swift
+2. SwiftUI
+3. XCTest (Unit Testing)
+4. Local notifications
+5. Live Activity
+6. Firebase (Auth, Storage, Firestore, Cloud Functions)
+7. StoreKit (Consumable, Non-consumable)
 
 ## Experience
 
-- 2022–Present - Frontend Developer Contractor  
+- 2022–Present - Frontend Developer Contractor
 
 ## Projects
 
-### AI Passport Photo
+### aipassportphoto.com
 
-AI Passport Photo website can convert a regular photo into a passport photo.
+[aipassportphoto.com](https://aipassportphoto.com/) can convert a regular photo into a passport photo.
 
 Related skills: `Astro`, `Vue`, `Uno CSS`, `Vitest`, `ESLint`, `Stripe`
 
-Deployment page:  
-- [Web](https://aipassportphoto.com/)
+### foto3x4.com
+
+[foto3x4.com](https://aipassportphoto.com/) is another website that can convert a regular photo into a passport photo, but uses a different tech stack.
+
+Related skills: `React`, `Tailwind CSS`
 
 ### Baby Routine
 
@@ -57,7 +59,7 @@ Baby Routine is an iOS app for tracking baby activities, such as feeding, sleepi
 
 Related skills: `SwiftUI`, `XCTest`, `Local notifications`, `Live Activity`, `Firebase`
 
-Deployment page:  
+Deployment page:
 - [App Store](https://apps.apple.com/us/app/baby-routine-baby-tracker/id6740127932)
 
 ### UK Passport Photo Pro
@@ -66,14 +68,5 @@ The UK Passport Photo Pro app can convert a regular photo into a passport photo 
 
 Related skills: `SwiftUI`, `XCTest`, `StoreKit`
 
-Deployment page:  
+Deployment page:
 - [App Store](https://apps.apple.com/us/app/uk-passport-photo-pro/id6743296026)
-
-### Email AI Assistant
-
-The Email AI Assistant app uses artificial intelligence to turn your simple ideas into a proper email.
-
-Related skills: `SwiftUI`, `XCTest`, `RevenueCat`
-
-Deployment page:  
-- [App Store](https://apps.apple.com/us/app/email-ai-assistant/id6743690196)  

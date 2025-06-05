@@ -34,7 +34,6 @@ iOS
 5. Live Activity
 6. Firebase (Auth, Storage, Firestore, Cloud Functions)
 7. StoreKit (Consumable, Non-consumable)
-9. Revenue Cat (Subscription)
 
 ## 经验
 
@@ -44,12 +43,15 @@ iOS
 
 ### AI Passport Photo
 
-AI Passport Photo 网站可以将用户的普通照片转化为证件照.
+[aipassportphoto.com](https://aipassportphoto.com/)网站可以将用户的普通照片转化为证件照.
 
 关联技能 `Astro`, `Vue`, `Uno CSS`, `Vitest`, `ESLint`, `Stripe`
 
-部署页面
-- [Web](https://aipassportphoto.com/)
+### foto3x4.com
+
+[foto3x4.com](https://aipassportphoto.com/)也是一个将用户的普通照片转化为证件照, 但是使用了不同的技术栈.
+
+关联技能: `React`, `Tailwind CSS`
 
 ### Baby Routine
 
@@ -68,12 +70,3 @@ UK Passport Photo Pro 应用可以将一张普通的照片转化为符合英国�
 
 部署页面
 - [App Store](https://apps.apple.com/us/app/uk-passport-photo-pro/id6743296026)
-
-### Email AI Assistant
-
-Email AI Assistant 应用可以使用人工智能技术将您的简单想法转化为一篇得体的邮件.
-
-关联技能 `SwiftUI`, `XCTest`, `Revenue Cat`
-
-部署页面
-- [App Store](https://apps.apple.com/us/app/email-ai-assistant/id6743690196)
