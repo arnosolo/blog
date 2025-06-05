@@ -1,7 +1,7 @@
 ---
 title: Arno
 lang: en-US
-description: Frontend Developer, iOS Developer. 3 years of work experience. Expected hourly rate 9 USD/h, receive payment biweekly.
+description: Frontend Developer, iOS Developer. 3 years of work experience. Expected hourly rate 9 USD/h.
 ---
 
 # {{ $frontmatter.title }}
