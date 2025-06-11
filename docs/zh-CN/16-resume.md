@@ -25,6 +25,7 @@ Web
 6. Vitest (Unit Testing)
 7. ESLint
 8. Stripe
+9. 自动通过 GitHub Actions 部署网页资源到 AWS
 
 iOS
 1. Swift

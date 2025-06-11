@@ -25,6 +25,7 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 6. Vitest (Unit Testing)
 7. ESLint
 8. Stripe
+9. Auto-deploy web assets to AWS via GitHub Actions.
 
 **iOS**
 1. Swift
