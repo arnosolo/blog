@@ -13,8 +13,8 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 ## Skills
 
 **Languages**
-1. Understand English
-2. Native Mandarin speaker
+1. English
+2. Mandarin
 
 **Web**
 1. HTML, CSS, TypeScript
@@ -38,7 +38,7 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 
 ## Experience
 
-- 2022–Present - Frontend Developer Contractor
+- 2022 ~ Present - Frontend Developer Contractor
 
 ## Projects
 
