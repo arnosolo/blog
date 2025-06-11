@@ -10,11 +10,7 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 
 {{ $frontmatter.description }}
 
-## Skills
-
-**Languages**
-1. English
-2. Mandarin
+## Skill
 
 **Web**
 1. HTML, CSS, TypeScript
@@ -35,6 +31,10 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 5. Live Activity
 6. Firebase (Auth, Storage, Firestore, Cloud Functions)
 7. StoreKit (Consumable, Non-consumable)
+
+**Languages**
+1. English
+2. Mandarin
 
 ## Experience
 

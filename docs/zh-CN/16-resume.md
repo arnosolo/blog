@@ -12,10 +12,6 @@ description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 60 
 
 ## 技能
 
-语言
-1. 英语
-2. 普通话
-
 Web
 1. HTML, CSS, TypeScript
 2. React
@@ -35,6 +31,10 @@ iOS
 5. Live Activity
 6. Firebase (Auth, Storage, Firestore, Cloud Functions)
 7. StoreKit (Consumable, Non-consumable)
+
+语言
+1. 英语
+2. 普通话
 
 ## 经验
 
