@@ -10,31 +10,35 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 
 {{ $frontmatter.description }}
 
-## Skill
+## Skills
 
 **Web**
-1. HTML, CSS, TypeScript
-2. React
-3. Vue
-4. Astro
-5. Uno CSS (Tailwind CSS alternative)
-6. Vitest (Unit Testing)
-7. ESLint
-8. Stripe
-9. Auto-deploy web assets to AWS via GitHub Actions.
+
+* Proficient in building websites using Vue / React + TypeScript + Tailwind CSS
+* Experienced with Astro.js to improve page load performance and SEO
+* Able to draw graphics using Canvas / SVG
+* Able to integrate Firebase for user authentication (Firebase Auth), structured data read/write (Firestore), and file storage (Firebase Storage)
+* Able to integrate Stripe for payments
+* Able to create Pull Requests on GitHub repositories
+* Familiar with using GitHub Actions to automatically deploy websites to AWS S3 and distribute content via AWS CloudFront
+* Not familiar with Next.js
 
 **iOS**
-1. Swift
-2. SwiftUI
-3. XCTest (Unit Testing)
-4. Local notifications
-5. Live Activity
-6. Firebase (Auth, Storage, Firestore, Cloud Functions)
-7. StoreKit (Consumable, Non-consumable)
+
+* Proficient in developing native iOS apps using Swift and SwiftUI, and publishing them to the App Store
+* Experienced with WidgetKit for creating widgets, and has experience with Live Activities
+* Experienced in consuming RESTful APIs
+* Not familiar with Objective-C or Storyboard
+
+**Android**
+
+* Able to develop hybrid H5 apps using Ionic and publish them on Google Play
+* Not familiar with Kotlin
+* Not experienced in developing mini programs
 
 **Languages**
-1. English
-2. Mandarin
+- English
+- Mandarin
 
 ## Experience
 

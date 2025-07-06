@@ -13,28 +13,29 @@ description: 前端开发者, iOS开发者. 工作经验 3 年. 期望时薪 60 
 ## 技能
 
 Web
-1. HTML, CSS, TypeScript
-2. React
-3. Vue
-4. Astro
-5. Uno CSS (Tailwind CSS alternative)
-6. Vitest (Unit Testing)
-7. ESLint
-8. Stripe
-9. 自动通过 GitHub Actions 部署网页资源到 AWS
+- 会使用 Vue / React + TypeScript + Tailwind CSS 编写网站
+- 会使用 Astro.js 提升网页加载数据, SEO 表现
+- 会使用 Canvas / SVG 绘制图形
+- 会集成 Firebase, 实现用户登录(Firebase Auth), 读写结构化数据(Firestore), 读写文件(Firebase Storage)
+- 会集成 Stripe 支付
+- 会在 Github 仓库中创建 Pull Request
+- 会使用 Github Actions 自动网页部署到 aws s3, 并使用 aws CloudFront 分发内容.
+- 不会 Next.js
 
 iOS
-1. Swift
-2. SwiftUI
-3. XCTest (Unit Testing)
-4. Local notification
-5. Live Activity
-6. Firebase (Auth, Storage, Firestore, Cloud Functions)
-7. StoreKit (Consumable, Non-consumable)
+- 会使用 Swift, SwiftUI 编写原生 iOS 应用, 并上架 App Store
+- 会使用 WidgetKit 编写小组件, Live Activity 经验
+- 会调用 Restful API 经验
+- 不会 OC, Storyboard
+
+Android
+- 会使用 Ionic 编写 H5 混合应用, 并上架 Google Play
+- 不会 Kotlin
+- 不会编写小程序
 
 语言
-1. 英语
-2. 普通话
+- 英语
+- 普通话
 
 ## 经验
 
