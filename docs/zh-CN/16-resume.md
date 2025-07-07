@@ -23,13 +23,17 @@ Web
 - 不会 Next.js
 
 iOS
-- 会使用 Swift, SwiftUI 编写原生 iOS 应用, 并上架 App Store
+- 会使用 Swift, SwiftUI 编写原生 iOS 应用
 - 会使用 WidgetKit 编写小组件, Live Activity 经验
 - 会调用 Restful API 经验
+- 会配置 Xcode Cloud 自动构建 iOS 应用
+- 成功在 App Store 上架了多款应用
 - 不会 OC, Storyboard
 
 Android
-- 会使用 Ionic 编写 H5 混合应用, 并上架 Google Play
+- 会使用 Ionic 编写 H5 混合应用
+- 会配置 Github Actions 自动构建 Android 应用
+- 成功在 Google Play 上架了多款应用
 - 不会 Kotlin
 - 不会编写小程序
 

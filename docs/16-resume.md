@@ -25,16 +25,21 @@ description: Frontend Developer, iOS Developer. 3 years of work experience. Expe
 
 **iOS**
 
-* Proficient in developing native iOS apps using Swift and SwiftUI, and publishing them to the App Store
-* Experienced with WidgetKit for creating widgets, and has experience with Live Activities
-* Experienced in consuming RESTful APIs
+* Proficient in using Swift and SwiftUI to develop native iOS apps
+* Experienced in using WidgetKit to create widgets, with Live Activity experience
+* Experienced in calling RESTful APIs
+* Able to configure Xcode Cloud for automatic iOS app builds
+* Successfully published multiple apps on the App Store
 * Not familiar with Objective-C or Storyboard
 
 **Android**
 
-* Able to develop hybrid H5 apps using Ionic and publish them on Google Play
+* Proficient in using Ionic to develop hybrid H5 apps
+* Able to configure GitHub Actions for automatic Android app builds
+* Successfully published multiple apps on Google Play
 * Not familiar with Kotlin
 * Not experienced in developing mini programs
+
 
 **Languages**
 - English
