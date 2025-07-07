@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as r,ae as o}from"./chunks/framework.CLNW5JS9.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"legacy.md","filePath":"legacy.md"}'),i={name:"legacy.md"};function s(n,e,l,d,h,c){return r(),t("div",null,e[0]||(e[0]=[o("",4)]))}const u=a(i,[["render",s]]);export{p as __pageData,u as default};
