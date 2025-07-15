@@ -25,6 +25,10 @@ description: This article shows how to build and publish an iOS App to TestFligh
 
 ## Manually build
 
+### App Icon
+
+App icon is required, and it must not include an alpha channel. If you’re unsure what that means, use a JPEG instead of a PNG.
+
 ### Basic workflow
 
 1. Set `Run Destination` as `Any iOS Device`
@@ -57,10 +61,6 @@ We will use a js script to automatically increase version. Since `Xcode Cloud` w
 <<< ../codes/demo3-build-ios-app-with-xcode-cloud/ci_scripts/ci_post_clone.sh
 <<< ../codes/demo3-build-ios-app-with-xcode-cloud/ci_scripts/changeAppInfo.mjs{js}
 :::
-
-### App Icon
-
-You App Icon can not have alpha channel, otherwise `Xcode Cloud` will failed to build.
 
 ### (Optional) Other notes
 
