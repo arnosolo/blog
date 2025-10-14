@@ -1,7 +1,7 @@
 ---
-title: Using Core Data to Save Data in an iOS Application  
+title: Using Core Data to Save Data in an iOS App
 lang: en-US
-description: This article explains how to separate the data layer from the view layer in an iOS application, how to use Core Data to save data, and how to save relationships between two data structures, using the process of building a to-do list app as an example.
+description: This article describes the process of writing a to-do list application, and explains how to separate the data layer and the view layer in an iOS application, how to use Core Data to save data, and how to save the relationship between two data structures.
 ---
 
 # {{ $frontmatter.title }}
@@ -10,99 +10,107 @@ description: This article explains how to separate the data layer from the view 
 
 ## Prerequisites
 
-1. [Swift Async Await](19-swift-async-await)
+1. [Swift async await](19-swift-async-await)
 
-## Example Code
+## Sample Code
 
 [demo5-todo-list](https://github.com/arnosolo/blog/tree/main/codes/demo5-todo-list)
 
-## Core Data Saving Data
+## Create an xcdatamodeld file
 
-### Defining Data Types
+Create a new file of type "Data Model" in the Model folder.
 
-My personal preference is to name the data structure used in the app `TagModel`, and the corresponding data structure in Core Data is `TagEntity`. The structure of `TagModel` is provided below. For `TagEntity`, create an `.xcdatamodeld` file in Xcode and add a new Entity named `TagEntity`.
+## Create Persistence.swift
+
+Create a Persistence.swift file in the Data/Local folder, which defines the logic for accessing Core Data.
+
 ::: code-group
-<<< ../codes/demo5-todo-list/demo5-todo-list/Models/TagModel.swift
+<<< ../codes/demo5-todo-list/demo5-todo-list/Data/Local/Persistence.swift
 :::
 
-### Defining DAO
+## Define Data Types
 
-Even though the following example code is long, all DAOs are similar. The DAO contains several parts:
-1. A shared instance
-2. Methods for CRUD operations
-3. Methods to convert between the Model and Entity
-::: code-group
-<<< ../codes/demo5-todo-list/demo5-todo-list/Data/Local/TagDAO.swift
-:::
-
-### Many-to-Many Relationship
-
-#### Modify the .xcdatamodeld File
-A common feature is that a to-do can reference multiple tags, and a tag can be assigned to multiple to-dos. The relationship between to-dos and tags is many-to-many. If we were to use SQL statements to operate the database, we would need to create an association table to describe the relationship. However, when using Core Data, this can be done using the graphical interface.
-1. In the `TodoEntity > Relationships` interface, add a `tags` field and set its destination to `TagEntity`. Open the right panel, set the relationship type to `To Many`.
-2. In the `TagEntity > Relationships` interface, add a `todos` field and set its destination to `TodoEntity`. Open the right panel, set the relationship type to `To Many`.
-3. Select `TagEntity > Relationships > Inverse` and set it to `todos`.
-
-![picture 0](assets/d52df4c377eb531a9274c58f7870ca41ae2b52106b42bf04f7d558a647f84b45.png)
-
-#### Including Tags in Todo
-
-1. First, add the `tags` field to `TodoModel`.
-2. In the `TodoDAO.updateOne` method, add a method to link `TodoEntity` to `TagEntity`.
-3. In the `TodoDAO.entityToModel` method, add a method to convert `TagEntity` to `TagModel`.
-4. When creating a new `Todo`, first call `TodoDAO.createOne` to create a `TodoEntity`, then call `TodoDAO.updateOne` to link the `TodoEntity` to `TagEntity`.
+Define `TodoModel` in the Model folder, and then define a corresponding `TodoEntity` in the xcdatamodeld file.
 ::: code-group
 <<< ../codes/demo5-todo-list/demo5-todo-list/Models/TodoModel.swift
+:::
+
+## Define DAO
+
+Define a `TodoDAO` responsible for persisting `TodoModel`.
+::: code-group
 <<< ../codes/demo5-todo-list/demo5-todo-list/Data/Local/TodoDAO.swift
 :::
 
-#### Finding Todos Associated with Tags
+## Relationships
 
-I encountered a strange issue: if I included `todos` as a field in `TagEntity`, like how `tags` is included in `Todo`, creating the association in the app works fine. However, during data import and export, the app often crashes, and I couldn’t understand why. So, my solution is to not fetch `todos` from `TagDAO` but instead add a `tagId` parameter in the `TodoDAO.findMany` method to filter todos.
+### Modify the .xcdatamodeld file
 
-### One-to-Many Relationship
+Many-to-many
+1. In the TodoEntity > Relationships interface, add a `tags` field, and select `TagEntity` as the Destination. Open the right sidebar > Relationship, and select `To Many` as the Type.
+2. In the TagEntity > Relationships interface, add a `todos` field, and select `TodoEntity` as the Destination. Open the right sidebar > Relationship, and select `To Many` as the Type.
+3. Select TagEntity > Relationships > Inverse as `todos`.
+![picture 0](./assets/d52df4c377eb531a9274c58f7870ca41ae2b52106b42bf04f7d558a647f84b45.png)
 
-#### Defining `LocationModel`
+One-to-many
+1. In the TodoEntity > Relationships interface, add a `location` field, and select `LocationEntity` as the Destination.
+2. In the LocationEntity > Relationships interface, add a `todos` field, and select `TodoEntity` as the Destination. Open the right sidebar > Relationship, and select `To Many` as the Type.
 
-::: code-group
-<<< ../codes/demo5-todo-list/demo5-todo-list/Models/LocationModel.swift
-:::
+### Writing
 
-#### Modify the .xcdatamodeld File
-1. In the `TodoEntity > Relationships` interface, add a `location` field and set its destination to `LocationEntity`.
-2. In the `LocationEntity > Relationships` interface, add a `todos` field and set its destination to `TodoEntity`. Open the right panel, set the relationship type to `To Many`.
-
-#### Including Location in Todo
-
-Writing to the database:
 ```swift
+// Models/TodoModel.swift
 class TodoDAO {
-    ...
     func updateOne(todo: TodoModel) async throws {
-        ...
-        Self.modifyEntity(entity: entity, todo: todo)
-        ...
-        if let id = todo.location?.id {
-            entity.location = LocationDAO.findEntity(id: id, ctx: ctx)
-        } else {
-            entity.location = nil
+        try await container.performBackgroundTask { ctx in
+            guard let entity = Self.findEntity(todoId: todo.todoId, ctx: ctx) else {
+                throw CustomError.notFound
+            }
+            Self.modifyEntity(entity: entity, todo: todo)
+
+            // Many-to-many
+            entity.removeFromTags(entity.tags ?? [])
+            for tag in todo.tags {
+                if let tagEntity = TagDAO.findEntity(tagId: tag.tagId, ctx: ctx) {
+                    entity.addToTags(tagEntity)
+                }
+            }
+
+            // One-to-many
+            if let id = todo.location?.id {
+                entity.location = LocationDAO.findEntity(id: id, ctx: ctx)
+            } else {
+                entity.location = nil
+            }
+
+            try ctx.save()
         }
-        
-        try ctx.save()
     }
 }
 ```
 
-Reading from the database:
+### Reading
+
 ```swift
+// Models/TodoModel.swift
 class TodoDAO {
     static func entityToModel(entity: TodoEntity, ctx: NSManagedObjectContext) -> TodoModel? {
-        ...
+        guard let todoId = entity.todoId,
+              let createdAt = entity.createdAt,
+              let updatedAt = entity.updatedAt,
+              let title = entity.title
+        else { return nil }
+        
+        let tagEntities = entity.tags?.allObjects as? [TagEntity]
+        let tags: [TagModel] = (tagEntities ?? []).compactMap { entity in
+            TagDAO.entityToModel(entity: entity, ctx: ctx)
+        }
+        
         var location: LocationModel? = nil
         if let locationEntity = entity.location {
             location = LocationDAO.entityToModel(entity: locationEntity, ctx: ctx)
         }
-
+        
         return TodoModel(
             todoId: todoId,
             createdAt: createdAt,
@@ -116,56 +124,15 @@ class TodoDAO {
 }
 ```
 
-### Fixing App Crashes
-
-I found that if an `Entity` is associated with multiple other `Entities`, the app might crash without any error message appearing in the console.
-
-For example, in one of my projects, I defined the following relationships: a `ProductEntity` can have multiple `ItemEntity`s, and each `ItemEntity` can be linked to a `ProductEntity`.
-
-```yml
-ProductEntity
-- items
-
-ItemEntity
-- product
-```
-
-Everything worked fine up to this point. However, when I tried to add another relationship—linking `ProductEntity` to `BrandEntity` through a `brand` relation—Xcode still built successfully, but the app crashed when running in the simulator.
-
-To handle this situation, my solution was:
-
-1. Instead of adding a `brand` relationship to `ProductEntity`, I added a field `brandId`.
-2. When reading data in `ProductDAO`, I look up the corresponding `BrandEntity` using the `brandId` from the `ProductEntity` instance:
-
-   ```swift
-   static func entityToModel(entity: ProductEntity, ctx: NSManagedObjectContext) -> ProductModel? {
-       ...
-       // brand
-       var brand: BrandModel? = nil
-       if let brandId = entity.brandId, let e = BrandDAO.findEntity(id: brandId, ctx: ctx) {
-           brand = BrandDAO.entityToModel(entity: e, ctx: ctx)
-       }
-       ...
-   }
-   ```
-3. When writing data in `ProductDAO`, I store the `id` of the `BrandModel` instance directly as `brandId`:
-
-   ```swift
-   static func modifyEntity(entity: ProductEntity, product: ProductModel) {
-       ...
-       entity.brandId = product.brand?.id
-   }
-   ```
-
-## Separating the Data Layer from the View Layer
+## Separating the Data Layer and the View Layer
 
 My personal preference is:
-- Define a `DAO` (Data Access Object) for each data type. The `DAO` is responsible for reading and writing to the local SQLite database.
-- Define a `Service` for each backend service. The `Service` is responsible for communication with remote databases.
-- Define a `Repository` for each data type. The `Repository` is responsible for coordinating whether the data comes from the local database or a remote database.
-- In the view, try to read and write data through the `Repository`, rather than directly through the `DAO` or `Service`.
+- Define a `DAO` (Data access object) for each data type. The `DAO` is responsible for reading and writing to the local sqlite database.
+- Define a `Service` for each backend service. The `Service` is responsible for communicating with the remote database.
+- Define a `Repository` for each data type. The `Repository` is responsible for coordinating whether data is obtained from the local database or the remote database.
+- In the view, try to read and write data by calling the `Repository` instead of the `DAO` or `Service`.
 
-Below is an example file structure:
+Here is an example of a file structure:
 ```yml
 Data/
     Local/
@@ -177,10 +144,10 @@ Data/
     TagRepository.swift
 ```
 
-Here is the code for `TodoRepository`, which currently only handles reading and writing to the local database. If there is server request code in the future, it can also be written in this class.
+The following is the code for `TodoRepository`. Currently, it only has code for reading and writing to the local database. If there is server request code in the future, it can also be written in this class.
 ::: code-group
 <<< ../codes/demo5-todo-list/demo5-todo-list/Data/TodoRepository.swift
 :::
 
-References:
+References
 - [Building a Data Layer](https://developer.android.com/codelabs/building-a-data-layer#0)
