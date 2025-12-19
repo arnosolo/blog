@@ -1,10 +1,10 @@
 ---
-title: Privacy Policy for Big Yellow Diary
+title: Privacy Policy for Timeline Filter
 lang: en-US
-description: Privacy Policy for Big Yellow Diary
+description: Privacy Policy for Timeline Filter
 email: shan_huang_apple_dev_2@outlook.com
 author: HUANG SHAN
-appName: Big Yellow Diary
+appName: Timeline Filter
 ---
 
 # {{ $frontmatter.title }}

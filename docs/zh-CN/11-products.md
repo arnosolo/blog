@@ -16,7 +16,7 @@ hero:
   #     link: /api-examples
 
 features:
-  - title: Big Yellow Diary
+  - title: Timeline Filter
     icon:
       src: /images/big-yellow-diary-app-icon.jpg
     # details: Some articles about Web development

@@ -1,10 +1,10 @@
 ---
-title: Big Yellow Diary Support Page
+title: Timeline Filter Support Page
 lang: en-US
-description: Big Yellow Diary Support Page
+description: Timeline Filter Support Page
 email: shan_huang_apple_dev_2@outlook.com
 author: HUANG SHAN
-appName: Big Yellow Diary
+appName: Timeline Filter
 ---
 
 # {{ $frontmatter.title }}
