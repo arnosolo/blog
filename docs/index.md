@@ -37,10 +37,5 @@ features:
       dark: /images/ri--cpu-line-dark.svg
     details: Some articles about Embedded System
     link: ./3-embedded-system-articles
-  - title: Arno - Frontend Developer
-    icon:
-      src: /images/ri--file-user-line.svg
-    details: Resume
-    link: ./16-resume
 ---
 

@@ -37,10 +37,5 @@ features:
       dark: /images/ri--cpu-line-dark.svg
     # details: Some articles about Embedded System
     link: ./3-embedded-system-articles
-  - title: 阿诺 - 前端工程师
-    icon:
-      src: /images/ri--file-user-line.svg
-    # details: 简历
-    link: ./16-resume
 ---
 
