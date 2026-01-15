@@ -16,17 +16,22 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 
 ## 前提条件
 
-1. 你的`Apple ID`已加入[苹果开发者计划](https://developer.apple.com/cn/programs/)
-2. 一个`Github`账户
+1. 一个苹果开发者帐号. 指你的`Apple ID`已加入[苹果开发者计划](https://developer.apple.com/cn/programs/)
+2. 一个`Github`账户.
+3. 一台未在其他苹果开发者帐号的苹果设备(iPhone, iPad, M芯片的Mac).
 
-## 创建一个 Xcode 项目
+## 新建 Xcode 项目
 
-### 创建一个新的`Bundle ID`
+### 新建 Bundle ID
 
 每一个苹果应用都有一个ID, 苹果称之为`Bundle ID`. 这个ID可以在苹果开发者网站中申请, 具体的网址为 [Apple Developer > Account > Certificates, IDs & Profiles > Identifiers](https://developer.apple.com/account/resources/identifiers/list).
 ![picture 0](../assets/537eedde7d55c4c2850180bb33aea5866d7924aacb2ca88992d41fc185810b8f.png)
 
-### 创建一个`App Store Connect App`
+::: tip 小技巧
+在 Xcode 上也可以创建 Bundle ID, 但是有一点概率失败. 此时可以打开 Apple Developer 网站手动创建. 依据: issue#16
+:::
+
+### 新建 App Store Connect App
 
 想要在`App Store`发布应用, 就必须用到 [App Store Connect](https://appstoreconnect.apple.com/) 网站. 之后像是什么更新应用, 添加`TestFlight`测试者, 查看`Xcode Cloud`日志, 全部都是在这个网站上操作的.
 
@@ -34,15 +39,18 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 2. 填写 New App 表格. 你可能会问 SKU 怎么写, 其实可以随便写, 我一般直接填入`Bundle ID`.
    ![picture 1](../assets/fa00d51854579103ad90b664716199d03c78282873aa025251358e5c4fbf3524.png)
 
+### 获取证书及描述文件
 
-### 创建`Xcode`项目
-
-1. 打开`Xcode`, 创建一个新的项目. 
-2. 然后将此项目的`Bundle ID`修改为我们新创建的`Bundle ID`. 修改位置在 `左侧导航栏` > `app.xcodeproj` > `Signing & Capabilities` > `Signing` > `Bundle Identifier`.
+1. 打开`Xcode`, 创建一个新的项目.
+2. 修改`Bundle ID`. 就用在 Apple Developer 网站上新建的`Bundle ID`. 修改位置在 `左侧导航栏` > `app.xcodeproj` > `Signing & Capabilities` > `Signing` > `Bundle Identifier`.
    ![picture 2](../assets/d5f20f382a26d66148925923d62bbc7ec97499653776d5767cce5ea22daef44c.png)
-3. 修改`Bundle ID`后, `Xcode`会自动获取`Profile`. 点击 `Provisioning Profile` 右边的i图标, 如果全部是打勾, 则说明获取成功.
-   ![picture 3](../assets/674fe85472d0acb3cc61adc8f205faf9788118ae1cac684e8f9973efa08007bb.png)  
-4. 在 iOS 模拟器上运行该项目, 保证该项目可以正常运行.
+3. 获取证书及描述文件. 修改`Bundle ID`后, `Xcode`会自动获取`Profile`. 点击 `Provisioning Profile` 右边的i图标, 如果全部是打勾, 则说明获取成功.
+   ![picture 3](../assets/674fe85472d0acb3cc61adc8f205faf9788118ae1cac684e8f9973efa08007bb.png)
+4. 在物理设备(iPhone, M芯片Mac)上运行该项目, 保证该项目可以正常运行. 注意, 不能是 iOS 模拟器.
+
+::: warning 注意
+你需要一台`全新的苹果设备`来激活苹果开发者帐号. 原因是想要在你的 iPhone 上运行 Xcode 编译出的应用, 需要描述文件, 想要描述文件, 就需要在 Apple Developer 上注册设备. 尽管在 Xcode 上修改 Bundle ID 并按下回车键后 Xcode 会自动获取证书, 注册设备, 获取描述文件, 但是已经被注册到其他苹果开发者帐号的 iPhone 注册到新的苹果开发者帐号会报错. 依据: issue#14
+:::
 
 ## 手动构建并上传
 
@@ -51,8 +59,9 @@ description: 手动构建一个 iOS 应用并上传到 TestFlight. 使用 Xcode 
 :::
 
 ### 设置应用图标
-- 这一操作是必须的, 因为没有应用图标将会导致手动上传到`TestFlight`失败
-- 此图片不得有`alpha通道`. 因为应用图标如有`alpha通道`, 将导致`Xcode Cloud`构建. 您可以通过将应用图标转换为`jpeg`格式来解决这个问题, 因为`jpeg`格式的图片没有`alpha通道`.
+
+- 必须有应用图标. 没有应用图标的应用上传到`TestFlight`会失败.
+- 应用图标不得有透明像素. 因为应用图标如有`alpha通道`, 将导致`Xcode Cloud`构建. 您可以通过将应用图标转换为`jpeg`格式来解决这个问题, 因为`jpeg`格式的图片没有`alpha通道`.
 
 ### 设置加密方式
 设置 `Info.plist` 中 `ITSAppUsesNonExemptEncryption` 键的值. 
