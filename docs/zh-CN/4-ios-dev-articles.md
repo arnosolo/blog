@@ -38,6 +38,7 @@ description: 本文列举了开发 iOS 应用所需要了解的信息. 预设的
 ### 构建与上架
 
 - [构建一个 iOS 应用并上传到 TestFlight](5-build-ios-app-with-xcode-cloud)
+- [uni-app 上传到 TestFlight](38-build-uni-app-upload-to-testflight)
 
 ## 按需学习
 

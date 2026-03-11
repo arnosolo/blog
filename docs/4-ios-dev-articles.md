@@ -38,6 +38,7 @@ description: This article lists the information needed to develop iOS apps. The 
 ### Building
 
 - [Build an iOS App and Upload to TestFlight](5-build-ios-app-with-xcode-cloud)
+- [Build a uni-app and Upload to TestFlight](38-build-uni-app-upload-to-testflight)
 
 ## Learn As Needed
 
