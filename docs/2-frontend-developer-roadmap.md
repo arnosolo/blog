@@ -1,14 +1,14 @@
 ---
 title: Frontend Developer Roadmap
 lang: en-US
-description: Step by step guide to becoming a frontend developer.
+description: Step by step to become a frontend developer
 ---
 
 # {{ $frontmatter.title }}
 
 {{ $frontmatter.description }}
 
-### Beginner
+## Beginner
 
 If you are familiar with the items listed in this chapter, you will be able to understand what other frontend engineers are talking about.
 
@@ -16,61 +16,62 @@ If you are familiar with the items listed in this chapter, you will be able to u
   - HTML
   - CSS
   - JavaScript
-- Getting Help
+  - TypeScript
+- Seeking Help
   - ChatGPT
-  - Google
+  - Google / Stack Overflow
+- Version Control
+  - Git
 - Command-line interface
   - ls, cd, grep, rm, man...
-- Version control
-  - Git
-- Data structures
-  - Data types
-  - TypeScript
-- Frontend frameworks
-  - React
-  - Vue.js
 - Package Managers
   - npm
-- CSS frameworks
+- Frontend Frameworks
+  - React / Vue
+- HTTP Request
+  - RESTful API
+  - axios
+- CSS Frameworks
   - Tailwind CSS
-- HTTP request
-  - HTTP request methods
-  - HTTP response status codes
-  - Fetch API
-- Build and deploy
-  - Domain names
-  - DNS
+- Unit Testing
+  - Vitest
+- Build and Deploy
   - Vite
   - Github Actions
-  - AWS s3
-  - AWS cloudfront
-  - AWS route53
-- Testing
-  - Vitest
-- Assignment
-  - Write and deploy a todo list App using skills you just learned
+  - AWS (S3, CloudFront, Route53)
 
-### Intermediate
+## Intermediate
 
 The following topics are not mandatory. Learn according to project needs.
 
+- Full-stack Frameworks
+  - SSR -> Next.js
+  - SSG -> Astro
+- Authentication
+  - OAuth (Google/Apple)
+  - JWT
 - Web APIs
   - Canvas
   - SVG
   - MediaDevices
-- Authentication
-  - Sign in with Google
-  - JWT
-- Accept payments
+  - Web Audio API
+- Backend as a Service (BaaS)
+  - Firebase
+  - Supabase
+- Accept Payments
   - Stripe
   - PayPal
-- Frontend frameworks
-  - Astro
-- Package Managers
-  - pnpm
-- Linter
+- 3D Graphics and Animation
+  - Three.js
+- Advanced CSS
+  - UnoCSS
+- Code Standards and Engineering
   - ESLint
-  - Lint staged
-  - Husky
-- Data visualization
+  - Lint staged / Husky
+- Data Visualization
   - Chart.js
+
+## Cross-platform and Mobile
+
+- Hybrid Development
+  - Uni-app
