@@ -14,7 +14,10 @@ description: 使用 HBuilderX 云打包构建 ipa 包并上传到 TestFlight
 
 ## 更新版本号
 
-打包前必须更新版本号, 否则上传 TestFlight 时会报错。
+打包前必须更新版本号，否则上传 TestFlight 时会报错。
+
+- **版本名称 (versionName)**：用户可见的版本号，如 `1.0.1`。需**大于应用商店当前上架的版本**。在同个版本的多次测试提交中可以保持不变。
+- **版本号 (versionCode)**：内部递增的整数。每次**提交（上传）**到 TestFlight 的包，其 `versionCode` **必须**比上一个递增（如从 1 改为 2）。即使版本名称没变，或者之前的包上传失败了，也需要增加。
 
 ## 证书与描述文件
 
@@ -52,4 +55,13 @@ description: 使用 HBuilderX 云打包构建 ipa 包并上传到 TestFlight
 1. 安装工具：在 Mac App Store 下载 **Transporter**。
 2. 登录：使用苹果开发者账号（App Store Connect 账号）登录。
 3. 交付：将生成的 Distribution 类型的 `.ipa` 包拖入 Transporter，点击“交付”。
-4. 处理：上传完成后，需等待 App Store Connect 后台处理（约 10-30 分钟）。
+4. 观察：上传完成后，登录 [App Store Connect](https://appstoreconnect.apple.com/)，在“我的 App” > 选择你的 App > **TestFlight** 页面可以查看到上传的包。
+5. 处理：新包上传后状态为“正在处理”（Processing），通常需等待 10-30 分钟。处理完成后，你（作为开发人员）会收到一封通知邮件。
+
+## 后续步骤：合规性与测试
+
+上传成功且处理完成后，在 App Store Connect 的“测试员”页面可能会看到“缺少合规信息”。
+
+1. 点击“缺少合规信息”。
+2. 根据 App 实际情况回答是否使用了加密（通常选择“否”）。
+3. 完成后即可开始内部测试或邀请外部测试员。
